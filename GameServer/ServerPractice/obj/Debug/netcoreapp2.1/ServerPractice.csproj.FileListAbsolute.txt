@@ -1,0 +1,11 @@
+D:\김준서_게임제작\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerPractice.deps.json
+D:\김준서_게임제작\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerPractice.runtimeconfig.json
+D:\김준서_게임제작\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerPractice.runtimeconfig.dev.json
+D:\김준서_게임제작\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerPractice.dll
+D:\김준서_게임제작\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerPractice.pdb
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.csprojAssemblyReference.cache
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.csproj.CoreCompileInputs.cache
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.AssemblyInfoInputs.cache
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.AssemblyInfo.cs
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.dll
+D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\ServerPractice.pdb

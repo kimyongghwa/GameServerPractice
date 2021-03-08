@@ -1,0 +1,9 @@
+D:\김준서_게임제작\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.deps.json
+D:\김준서_게임제작\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.dll
+D:\김준서_게임제작\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.pdb
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.csprojAssemblyReference.cache
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.csproj.CoreCompileInputs.cache
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.AssemblyInfoInputs.cache
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.AssemblyInfo.cs
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.dll
+D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.pdb
