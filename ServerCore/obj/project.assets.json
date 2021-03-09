@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\김준서_게임제작\\ServerCore\\ServerCore.csproj",
+      "projectUniqueName": "D:\\github\\GameServerPractice\\ServerCore\\ServerCore.csproj",
       "projectName": "ServerCore",
-      "projectPath": "D:\\김준서_게임제작\\ServerCore\\ServerCore.csproj",
+      "projectPath": "D:\\github\\GameServerPractice\\ServerCore\\ServerCore.csproj",
       "packagesPath": "C:\\Users\\KIM JOONSEO\\.nuget\\packages\\",
-      "outputPath": "D:\\김준서_게임제작\\ServerCore\\obj\\",
+      "outputPath": "D:\\github\\GameServerPractice\\ServerCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

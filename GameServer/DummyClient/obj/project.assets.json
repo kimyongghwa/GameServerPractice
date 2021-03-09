@@ -730,11 +730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\김준서_게임제작\\GameServer\\DummyClient\\DummyClient.csproj",
+      "projectUniqueName": "D:\\github\\GameServerPractice\\GameServer\\DummyClient\\DummyClient.csproj",
       "projectName": "DummyClient",
-      "projectPath": "D:\\김준서_게임제작\\GameServer\\DummyClient\\DummyClient.csproj",
+      "projectPath": "D:\\github\\GameServerPractice\\GameServer\\DummyClient\\DummyClient.csproj",
       "packagesPath": "C:\\Users\\KIM JOONSEO\\.nuget\\packages\\",
-      "outputPath": "D:\\김준서_게임제작\\GameServer\\DummyClient\\obj\\",
+      "outputPath": "D:\\github\\GameServerPractice\\GameServer\\DummyClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -753,11 +753,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\김준서_게임제작\\GameServer\\ServerPractice\\Server.csproj": {
-              "projectPath": "D:\\김준서_게임제작\\GameServer\\ServerPractice\\Server.csproj"
+            "D:\\github\\GameServerPractice\\GameServer\\ServerPractice\\Server.csproj": {
+              "projectPath": "D:\\github\\GameServerPractice\\GameServer\\ServerPractice\\Server.csproj"
             },
-            "D:\\김준서_게임제작\\ServerCore\\ServerCore.csproj": {
-              "projectPath": "D:\\김준서_게임제작\\ServerCore\\ServerCore.csproj"
+            "D:\\github\\GameServerPractice\\ServerCore\\ServerCore.csproj": {
+              "projectPath": "D:\\github\\GameServerPractice\\ServerCore\\ServerCore.csproj"
             }
           }
         }
