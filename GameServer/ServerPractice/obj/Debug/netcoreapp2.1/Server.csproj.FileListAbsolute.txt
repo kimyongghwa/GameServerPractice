@@ -12,6 +12,9 @@ D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Serv
 D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.csproj.CopyComplete
 D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.dll
 D:\김준서_게임제작\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.pdb
+D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
+D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.AssemblyInfoInputs.cache
+D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
 D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\Server.deps.json
 D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\Server.runtimeconfig.json
 D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\Server.runtimeconfig.dev.json
@@ -20,9 +23,7 @@ D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\S
 D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerCore.dll
 D:\github\GameServerPractice\GameServer\ServerPractice\bin\Debug\netcoreapp2.1\ServerCore.pdb
 D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache
-D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
-D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.AssemblyInfoInputs.cache
-D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
 D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.csproj.CopyComplete
 D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.dll
 D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.pdb
+D:\github\GameServerPractice\GameServer\ServerPractice\obj\Debug\netcoreapp2.1\Server.genruntimeconfig.cache

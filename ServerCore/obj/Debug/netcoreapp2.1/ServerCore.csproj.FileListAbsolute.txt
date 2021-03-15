@@ -7,12 +7,12 @@ D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.Assembly
 D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.AssemblyInfo.cs
 D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.dll
 D:\김준서_게임제작\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.pdb
-D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.deps.json
-D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.dll
-D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.pdb
-D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.csprojAssemblyReference.cache
 D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.csproj.CoreCompileInputs.cache
 D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.AssemblyInfoInputs.cache
 D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.AssemblyInfo.cs
 D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.dll
 D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.pdb
+D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.deps.json
+D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.dll
+D:\github\GameServerPractice\ServerCore\bin\Debug\netcoreapp2.1\ServerCore.pdb
+D:\github\GameServerPractice\ServerCore\obj\Debug\netcoreapp2.1\ServerCore.csprojAssemblyReference.cache

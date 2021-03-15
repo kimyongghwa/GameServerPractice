@@ -14,6 +14,12 @@ D:\김준서_게임제작\GameServer\DummyClient\bin\Debug\netcoreapp2.1\ServerC
 D:\김준서_게임제작\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.csproj.CopyComplete
 D:\김준서_게임제작\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.dll
 D:\김준서_게임제작\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.pdb
+D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.csproj.CoreCompileInputs.cache
+D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.AssemblyInfoInputs.cache
+D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.AssemblyInfo.cs
+D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.deps.json
+D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.runtimeconfig.json
+D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.runtimeconfig.dev.json
 D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\DummyClient.deps.json
 D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\DummyClient.runtimeconfig.json
 D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\DummyClient.runtimeconfig.dev.json
@@ -24,9 +30,7 @@ D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Serv
 D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\ServerCore.pdb
 D:\github\GameServerPractice\GameServer\DummyClient\bin\Debug\netcoreapp2.1\Server.pdb
 D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.csprojAssemblyReference.cache
-D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.csproj.CoreCompileInputs.cache
-D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.AssemblyInfoInputs.cache
-D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.AssemblyInfo.cs
 D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.csproj.CopyComplete
 D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.dll
 D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.pdb
+D:\github\GameServerPractice\GameServer\DummyClient\obj\Debug\netcoreapp2.1\DummyClient.genruntimeconfig.cache

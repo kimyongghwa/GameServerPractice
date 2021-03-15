@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1401
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "ServerPractice\Server.csproj", "{2A491951-0A0E-47B7-B200-978913FC7F06}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerCore", "..\ServerCore\ServerCore.csproj", "{4E03981F-CFC3-4BED-B8D6-9E3BC97D6613}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyClient", "DummyClient\DummyClient.csproj", "{B375F584-4AAD-4D19-8AC5-1B89A908FAD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacketGenerator", "PakcetGenerator\PacketGenerator.csproj", "{5E130057-CBD1-4A65-A6D1-3B93A24CC988}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{F4D42057-C93A-4C25-9BE3-AEB9A5F4B7A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{B375F584-4AAD-4D19-8AC5-1B89A908FAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B375F584-4AAD-4D19-8AC5-1B89A908FAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B375F584-4AAD-4D19-8AC5-1B89A908FAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E130057-CBD1-4A65-A6D1-3B93A24CC988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E130057-CBD1-4A65-A6D1-3B93A24CC988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E130057-CBD1-4A65-A6D1-3B93A24CC988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E130057-CBD1-4A65-A6D1-3B93A24CC988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E130057-CBD1-4A65-A6D1-3B93A24CC988} = {F4D42057-C93A-4C25-9BE3-AEB9A5F4B7A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0733BB4-02B6-43B1-B526-06BADA322FAB}

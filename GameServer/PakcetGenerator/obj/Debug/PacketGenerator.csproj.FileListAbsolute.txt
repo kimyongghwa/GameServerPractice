@@ -1,0 +1,13 @@
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.csproj.CoreCompileInputs.cache
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.AssemblyInfoInputs.cache
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.AssemblyInfo.cs
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.dll
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.pdb
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.exe
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.deps.json
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.runtimeconfig.json
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.runtimeconfig.dev.json
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.dll
+D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.pdb
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.csprojAssemblyReference.cache
+D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache
