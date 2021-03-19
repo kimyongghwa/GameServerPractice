@@ -9,5 +9,4 @@ D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.runt
 D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.runtimeconfig.dev.json
 D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.dll
 D:\github\GameServerPractice\GameServer\PakcetGenerator\bin\PacketGenerator.pdb
-D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.csprojAssemblyReference.cache
 D:\github\GameServerPractice\GameServer\PakcetGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache
