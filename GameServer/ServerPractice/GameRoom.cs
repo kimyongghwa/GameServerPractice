@@ -20,7 +20,7 @@ namespace Server
         {
             foreach (ClientSession s in _sessions)
                 s.Send(_pendingList);
-            Console.WriteLine($"Flushed {_pendingList.Count} items");
+            //Console.WriteLine($"Flushed {_pendingList.Count} items");
             _pendingList.Clear();
         }
 
@@ -69,9 +69,9 @@ namespace Server
         public void Move(ClientSession session, C_Move packet)
         {
             //좌표수정
-            session.PosX = packet.posX;
             session.PosX = packet.posY;
             session.PosX = packet.posZ;
+            session.PosX = packet.posX;
             //모든 플레이어에게 전달
             S_BroadcastMove move = new S_BroadcastMove();
             move.playerId = session.SessionId;

@@ -291,7 +291,8 @@ public class S_BroadcastMove : IPacket
 		count += sizeof(int);
 		this.posX = BitConverter.ToSingle(segment.Array, segment.Offset + count);
 		count += sizeof(float);
-		this.posY = BitConverter.ToSingle(segment.Array, segment.Offset + count);
+        Console.WriteLine("thisposX " + this.posX);
+        this.posY = BitConverter.ToSingle(segment.Array, segment.Offset + count);
 		count += sizeof(float);
 		this.posZ = BitConverter.ToSingle(segment.Array, segment.Offset + count);
 		count += sizeof(float);

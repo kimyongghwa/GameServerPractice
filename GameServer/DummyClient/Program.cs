@@ -26,7 +26,6 @@ namespace DummyClient
             {
                 try
                 {
-                    Console.WriteLine("Try but.");
                     SessionManager.Instance.SendForEach();
                 }
                 catch (Exception e)
