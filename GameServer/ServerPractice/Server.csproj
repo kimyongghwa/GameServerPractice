@@ -6,7 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GameRoom.cs" />
+    <Compile Remove="Packet\PacketHandler.cs" />
+    <Compile Remove="Packet\ServerPacketManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.12.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\ServerCore\ServerCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Packet\" />
   </ItemGroup>
 
 </Project>

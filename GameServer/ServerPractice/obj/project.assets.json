@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Google.Protobuf/3.12.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -208,6 +220,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "System.Memory/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "ServerCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -221,6 +242,26 @@
     }
   },
   "libraries": {
+    "Google.Protobuf/3.12.3": {
+      "sha512": "k+Dj0bdOy6/xhIZOthvDS2Ux9y5q6dWw+36n3SBVHYl520+tvcqLOpx6YsgQVy12cuzZbF+r73RZ0fxmpJ8c6A==",
+      "type": "package",
+      "path": "google.protobuf/3.12.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.12.3.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.pdb",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.pdb",
+        "lib/netstandard1.0/Google.Protobuf.xml",
+        "lib/netstandard2.0/Google.Protobuf.dll",
+        "lib/netstandard2.0/Google.Protobuf.pdb",
+        "lib/netstandard2.0/Google.Protobuf.xml"
+      ]
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "sha512": "JNHhG+j5eIhG26+H721IDmwswGUznTwwSuJMFe/08h0X2YarHvA15sVAvUkA/2Sp3W0ENNm48t+J7KTPRqEpfA==",
       "type": "package",
@@ -691,6 +732,27 @@
         "netstandard.library.nuspec"
       ]
     },
+    "System.Memory/4.5.2": {
+      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+      "type": "package",
+      "path": "system.memory/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.2.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "ServerCore/1.0.0": {
       "type": "project",
       "path": "../../ServerCore/ServerCore.csproj",
@@ -699,6 +761,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Google.Protobuf >= 3.12.3",
       "Microsoft.NETCore.App >= 2.1.0",
       "ServerCore >= 1.0.0"
     ]
@@ -750,6 +813,10 @@
       "netcoreapp2.1": {
         "targetAlias": "netcoreapp2.1",
         "dependencies": {
+          "Google.Protobuf": {
+            "target": "Package",
+            "version": "[3.12.3, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
