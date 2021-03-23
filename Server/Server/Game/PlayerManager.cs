@@ -10,7 +10,7 @@ namespace Server.Game
 
 		object _lock = new object();
 		Dictionary<int, Player> _players = new Dictionary<int, Player>();
-		int _playerId = 1; // TODO
+		public int _playerId = 1; // TODO
 		
 		public Player Add()
 		{
