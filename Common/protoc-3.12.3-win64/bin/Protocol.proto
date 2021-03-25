@@ -60,6 +60,6 @@ message PlayerInfo {
 message PositionInfo{
 	CreatureState state = 1;
 	MoveDir moveDir= 2;
-	int32 posX = 3;
-	int32 posY = 4;
+	float posX = 3;
+	float posY = 4;
 }
