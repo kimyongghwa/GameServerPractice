@@ -11,6 +11,10 @@ enum MsgId {
   S_DESPAWN = 3;
   C_MOVE = 4;
   S_MOVE = 5;
+  C_DASH = 6;
+  S_DASH = 7;
+  C_SCALE = 8;
+  S_SCALE = 9;
 }
 
 enum CreatureState {
@@ -49,6 +53,24 @@ message C_Move {
 message S_Move {
   int32 playerId =1;
   PositionInfo posInfo = 2;
+}
+
+message C_Dash {
+  PositionInfo posInfo = 1;
+}
+
+message S_Dash {
+  int32 playerId =1;
+  PositionInfo posInfo = 2;
+}
+
+message C_Scale{
+ int32 scale =1;
+}
+
+message S_Scale{
+ int32 playerId =1;
+ int32 scale =2;
 }
 
 message PlayerInfo {
