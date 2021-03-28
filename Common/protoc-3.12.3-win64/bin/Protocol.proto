@@ -85,3 +85,16 @@ message PositionInfo{
 	float posX = 3;
 	float posY = 4;
 }
+
+message RoomInfo{
+	int32 roomId = 1;
+	int32 playerNumber = 2;
+}
+
+message C_Room {
+}
+
+message S_Room {
+	int32 playerId = 1;
+	repeated RoomInfo room = 2;
+}
