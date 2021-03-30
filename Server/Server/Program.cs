@@ -26,7 +26,7 @@ namespace Server
 		static void Main(string[] args)
 		{
 			RoomManager.Instance.Add();
-
+			RoomManager.Instance.Add();
 			// DNS (Domain Name System)
 			string host = Dns.GetHostName();
 			IPHostEntry ipHost = Dns.GetHostEntry(host);

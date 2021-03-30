@@ -10,7 +10,7 @@ namespace Server.Game
 
 		object _lock = new object();
 		Dictionary<int, GameRoom> _rooms = new Dictionary<int, GameRoom>();
-		int _roomId = 1;
+		public int _roomId = 0;
 
 		public GameRoom Add()
 		{
@@ -22,7 +22,7 @@ namespace Server.Game
 				_rooms.Add(_roomId, gameRoom);
 				_roomId++;
 			}
-
+			
 			return gameRoom;
 		}
 

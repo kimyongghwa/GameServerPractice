@@ -1,6 +1,7 @@
 ﻿using Google.Protobuf;
 using Google.Protobuf.Protocol;
 using Server;
+using Server.Game;
 using ServerCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ class PacketHandler
 		C_Move movePacket = packet as C_Move;
 		ClientSession clientSession = session as ClientSession;
 
-        Console.WriteLine($"C_Move({movePacket.PosInfo.PosX}, {movePacket.PosInfo.PosY})");
+		Console.WriteLine($"C_Move({movePacket.PosInfo.PosX}, {movePacket.PosInfo.PosY})");
 
 		if (clientSession.MyPlayer == null)
 			return;
@@ -71,5 +72,20 @@ class PacketHandler
 		resScalePacket.Scale = scalePacket.Scale;
 
 		clientSession.MyPlayer.Room.Broadcast(resScalePacket);
+	}
+
+	public static void C_RoomHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		S_Room roomPacket = new S_Room();
+		for (int i = 1; i < RoomManager.Instance._roomId; i++)
+		{
+			RoomInfo roomInfo = new RoomInfo();
+			roomInfo.PlayerNumber = RoomManager.Instance.Find(i).PlayerNumber;
+			roomInfo.RoomId = i;
+			roomInfo.Name = "Test Room";
+			roomPacket.Room.Add(roomInfo);
+		}
+		clientSession.Send(roomPacket);
 	}
 }

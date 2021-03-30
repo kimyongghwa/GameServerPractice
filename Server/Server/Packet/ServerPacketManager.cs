@@ -28,7 +28,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CDash, MakePacket<C_Dash>);
 		_handler.Add((ushort)MsgId.CDash, PacketHandler.C_DashHandler);		
 		_onRecv.Add((ushort)MsgId.CScale, MakePacket<C_Scale>);
-		_handler.Add((ushort)MsgId.CScale, PacketHandler.C_ScaleHandler);
+		_handler.Add((ushort)MsgId.CScale, PacketHandler.C_ScaleHandler);		
+		_onRecv.Add((ushort)MsgId.CRoom, MakePacket<C_Room>);
+		_handler.Add((ushort)MsgId.CRoom, PacketHandler.C_RoomHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

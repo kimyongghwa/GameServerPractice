@@ -15,6 +15,10 @@ enum MsgId {
   S_DASH = 7;
   C_SCALE = 8;
   S_SCALE = 9;
+  C_ROOM = 10;
+  S_ROOM = 11;
+  C_CREATEROOM = 12;
+  S_ROOMCREATESUCCESS = 13;
 }
 
 enum CreatureState {
@@ -89,6 +93,8 @@ message PositionInfo{
 message RoomInfo{
 	int32 roomId = 1;
 	int32 playerNumber = 2;
+	string name = 3;
+	string password = 4;
 }
 
 message C_Room {
@@ -97,4 +103,14 @@ message C_Room {
 message S_Room {
 	int32 playerId = 1;
 	repeated RoomInfo room = 2;
+}
+
+message C_CreateRoom{
+	string name = 1;
+	string password = 2;
+}
+
+message S_RoomCreateSuccess{
+	int32 plaerId = 1;
+	RoomInfo room = 2;
 }

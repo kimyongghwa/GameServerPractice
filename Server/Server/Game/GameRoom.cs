@@ -10,9 +10,15 @@ namespace Server.Game
 	{
 		object _lock = new object();
 		public int RoomId { get; set; }
-
+		public string RoomName { get; set; }
 		List<Player> _players = new List<Player>();
-
+		public int PlayerNumber
+        {
+            get
+            {
+				return _players.Count;
+            }
+        }
 		public void EnterGame(Player newPlayer)
 		{
 			if (newPlayer == null)
