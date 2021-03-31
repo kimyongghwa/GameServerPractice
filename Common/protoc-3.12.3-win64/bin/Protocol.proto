@@ -17,8 +17,9 @@ enum MsgId {
   S_SCALE = 9;
   C_ROOM = 10;
   S_ROOM = 11;
-  C_CREATEROOM = 12;
-  S_ROOMCREATESUCCESS = 13;
+  C_CREATE_ROOM = 12;
+  S_ROOM_CREATE_SUCCESS = 13;
+  S_ENTER_ROOM = 14;
 }
 
 enum CreatureState {
@@ -34,8 +35,18 @@ enum MoveDir{
 	RIGHT = 2;
 }
 
+message MapSave{
+	repeated int32 mapCell = 1;
+}
+
+message MapSaveData{
+	repeated MapSave map = 1;
+}
 
 message S_EnterGame {
+  PlayerInfo player = 1;
+}
+message S_EnterRoom{
   PlayerInfo player = 1;
 }
 
@@ -113,4 +124,10 @@ message C_CreateRoom{
 message S_RoomCreateSuccess{
 	int32 plaerId = 1;
 	RoomInfo room = 2;
+	PlayerInfo player = 3;
+}
+
+message C_SendMapData{
+	MapSaveData mapSaves = 1;
+	int32 roomId = 2;
 }
