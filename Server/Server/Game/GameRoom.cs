@@ -11,6 +11,8 @@ namespace Server.Game
 		object _lock = new object();
 		public int RoomId { get; set; }
 		public string RoomName { get; set; }
+		public string Password { get; set; }
+		public MapSaveData MData { get; set; }
 		List<Player> _players = new List<Player>();
 		public int PlayerNumber
         {

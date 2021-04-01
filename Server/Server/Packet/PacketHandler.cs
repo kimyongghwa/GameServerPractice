@@ -88,4 +88,30 @@ class PacketHandler
 		}
 		clientSession.Send(roomPacket);
 	}
+
+	public static void C_CreateRoomHandler(PacketSession session, IMessage packet)
+    {
+		Console.WriteLine("CreateRoom!");
+		ClientSession clientSession = session as ClientSession;
+		C_CreateRoom createRoomPacket = packet as C_CreateRoom;
+		GameRoom room = RoomManager.Instance.Add();
+		room.RoomName = createRoomPacket.Name;
+		room.Password = createRoomPacket.Password;
+		S_RoomCreateSuccess roomSuccessPacket = new S_RoomCreateSuccess();
+		roomSuccessPacket.Room = new RoomInfo();
+		roomSuccessPacket.Room.Name = room.RoomName;
+		roomSuccessPacket.Room.Password = room.Password;
+		roomSuccessPacket.Room.RoomId = room.RoomId;
+		roomSuccessPacket.Room.PlayerNumber = 0;
+		clientSession.Send(roomSuccessPacket);
+    }
+
+	public static void C_SendMapDataHandler(PacketSession session, IMessage packet)
+    {
+		Console.WriteLine("SMDH!");
+		ClientSession clientSession = session as ClientSession;
+		C_SendMapData sendMapPacket = packet as C_SendMapData;
+		RoomManager.Instance.Find(sendMapPacket.RoomId).MData = sendMapPacket.MapSaves;
+		clientSession.MyPlayer.Room = RoomManager.Instance.Find(sendMapPacket.RoomId);
+	}
 }

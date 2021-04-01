@@ -20,6 +20,7 @@ enum MsgId {
   C_CREATE_ROOM = 12;
   S_ROOM_CREATE_SUCCESS = 13;
   S_ENTER_ROOM = 14;
+  C_SEND_MAP_DATA = 15;
 }
 
 enum CreatureState {
