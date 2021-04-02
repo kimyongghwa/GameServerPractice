@@ -21,6 +21,7 @@ enum MsgId {
   S_ROOM_CREATE_SUCCESS = 13;
   S_ENTER_ROOM = 14;
   C_SEND_MAP_DATA = 15;
+  C_JOIN_ROOM = 16;
 }
 
 enum CreatureState {
@@ -131,4 +132,9 @@ message S_RoomCreateSuccess{
 message C_SendMapData{
 	MapSaveData mapSaves = 1;
 	int32 roomId = 2;
+}
+
+message C_JoinRoom{
+	int32 roomId = 1;
+	string roomPassword = 2;
 }

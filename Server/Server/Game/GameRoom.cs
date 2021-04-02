@@ -21,7 +21,7 @@ namespace Server.Game
 				return _players.Count;
             }
         }
-		public void EnterGame(Player newPlayer)
+		public void EnterRoom(Player newPlayer)
 		{
 			if (newPlayer == null)
 				return;
@@ -58,7 +58,17 @@ namespace Server.Game
 				}
 			}
 		}
+		public void EnterGame(Player newPlayer)
+		{
+			if (newPlayer == null)
+				return;
 
+			lock (_lock)
+			{
+				_players.Add(newPlayer);
+				newPlayer.Room = this;
+			}
+		}
 		public void LeaveGame(int playerId)
 		{
 			lock (_lock)
