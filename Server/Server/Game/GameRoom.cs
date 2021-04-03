@@ -25,7 +25,7 @@ namespace Server.Game
 		{
 			if (newPlayer == null)
 				return;
-
+			Console.WriteLine(newPlayer.Info.Name + "  join  " + RoomId);
 			lock (_lock)
 			{
 				_players.Add(newPlayer);
@@ -33,7 +33,7 @@ namespace Server.Game
 
 				// 본인한테 정보 전송
 				{
-					S_EnterGame enterPacket = new S_EnterGame();
+					S_EnterRoom enterPacket = new S_EnterRoom();
 					enterPacket.Player = newPlayer.Info;
 					newPlayer.Session.Send(enterPacket);
 
@@ -58,7 +58,7 @@ namespace Server.Game
 				}
 			}
 		}
-		public void EnterGame(Player newPlayer)
+		public void EnterGame(Player newPlayer) //로비로 접속
 		{
 			if (newPlayer == null)
 				return;
@@ -79,21 +79,54 @@ namespace Server.Game
 
 				_players.Remove(player);
 				player.Room = null;
-
-				// 본인한테 정보 전송
+				if (RoomId != 0)
 				{
-					S_LeaveGame leavePacket = new S_LeaveGame();
-					player.Session.Send(leavePacket);
-				}
-
-				// 타인한테 정보 전송
-				{
-					S_Despawn despawnPacket = new S_Despawn();
-					despawnPacket.PlayerIds.Add(player.Info.PlayerId);
-					foreach (Player p in _players)
+					// 본인한테 정보 전송
 					{
-						if (player != p)
-							p.Session.Send(despawnPacket);
+						S_LeaveGame leavePacket = new S_LeaveGame();
+						player.Session.Send(leavePacket);
+					}
+
+					// 타인한테 정보 전송
+					{
+						S_Despawn despawnPacket = new S_Despawn();
+						despawnPacket.PlayerIds.Add(player.Info.PlayerId);
+						foreach (Player p in _players)
+						{
+							if (player != p)
+								p.Session.Send(despawnPacket);
+						}
+					}
+				}
+			}
+		}
+		public void LeaveRoom(int playerId)
+		{
+			lock (_lock)
+			{
+				Player player = _players.Find(p => p.Info.PlayerId == playerId);
+				if (player == null)
+					return;
+
+				_players.Remove(player);
+				RoomManager.Instance.Find(0).EnterGame(player); //로비로 접속
+				if (RoomId != 0)
+				{
+					// 본인한테 정보 전송
+					{
+						S_LeaveGame leavePacket = new S_LeaveGame();
+						player.Session.Send(leavePacket);
+					}
+
+					// 타인한테 정보 전송
+					{
+						S_Despawn despawnPacket = new S_Despawn();
+						despawnPacket.PlayerIds.Add(player.Info.PlayerId);
+						foreach (Player p in _players)
+						{
+							if (player != p)
+								p.Session.Send(despawnPacket);
+						}
 					}
 				}
 			}

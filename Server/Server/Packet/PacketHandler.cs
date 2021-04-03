@@ -114,17 +114,24 @@ class PacketHandler
 		ClientSession clientSession = session as ClientSession;
 		C_SendMapData sendMapPacket = packet as C_SendMapData;
 		RoomManager.Instance.Find(sendMapPacket.RoomId).MData = sendMapPacket.MapSaves;
-		RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
+		if(clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
+			RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
 	}
 
 	public static void C_JoinRoomHandler(PacketSession session, IMessage packet)
     {
 		ClientSession clientSession = session as ClientSession;
 		C_JoinRoom joinPacket = packet as C_JoinRoom;
+		Console.WriteLine("Joinroom " + joinPacket.RoomId);
 		//TODO 비밀번호 체크
 		RoomManager.Instance.Find(joinPacket.RoomId).EnterRoom(clientSession.MyPlayer);
 		S_EnterRoom enterRoomPacket = new S_EnterRoom();
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
+	}
+	public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
+    {
+		ClientSession clientSession = session as ClientSession;
+		clientSession.MyPlayer.Room.LeaveRoom(clientSession.MyPlayer.Info.PlayerId);
 	}
 }

@@ -22,6 +22,8 @@ enum MsgId {
   S_ENTER_ROOM = 14;
   C_SEND_MAP_DATA = 15;
   C_JOIN_ROOM = 16;
+  S_LEAVE_ROOM = 17;
+  C_LEAVE_ROOM = 18;
 }
 
 enum CreatureState {
@@ -54,6 +56,14 @@ message S_EnterRoom{
 
 message S_LeaveGame {
 }
+
+message C_LeaveRoom {
+}
+
+message S_LeaveRoom {
+}
+
+
 
 message S_Spawn {
   repeated PlayerInfo players = 1;
