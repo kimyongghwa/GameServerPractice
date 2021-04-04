@@ -33,9 +33,9 @@ namespace Server.Game
 
 				// 본인한테 정보 전송
 				{
-					S_EnterRoom enterPacket = new S_EnterRoom();
-					enterPacket.Player = newPlayer.Info;
-					newPlayer.Session.Send(enterPacket);
+					//S_EnterRoom enterPacket = new S_EnterRoom();
+					//enterPacket.Player = newPlayer.Info;
+					//newPlayer.Session.Send(enterPacket);
 
 					S_Spawn spawnPacket = new S_Spawn();
 					foreach (Player p in _players)
