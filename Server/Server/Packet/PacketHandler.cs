@@ -76,6 +76,7 @@ class PacketHandler
 
 	public static void C_RoomHandler(PacketSession session, IMessage packet)
 	{
+		Console.WriteLine("Room Give Please");
 		ClientSession clientSession = session as ClientSession;
 		S_Room roomPacket = new S_Room();
 		for (int i = 1; i < RoomManager.Instance._roomId; i++)
@@ -125,9 +126,17 @@ class PacketHandler
 		Console.WriteLine("Joinroom " + joinPacket.RoomId);
 		//TODO 비밀번호 체크
 		RoomManager.Instance.Find(joinPacket.RoomId).EnterRoom(clientSession.MyPlayer);
-		S_EnterRoom enterRoomPacket = new S_EnterRoom();
+		S_EnterRoom enterRoomPacket = new S_EnterRoom(); 
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
+		S_MapSaveDataSend mapSendPacket = new S_MapSaveDataSend();
+		int index = 0;
+        foreach (MapSave m in clientSession.MyPlayer.Room.MData.Map)
+        {
+			mapSendPacket.Map = m;
+			mapSendPacket.Index = index;
+			clientSession.Send(mapSendPacket);
+        }
 	}
 	public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
     {

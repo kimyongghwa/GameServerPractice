@@ -19,6 +19,7 @@ namespace Server.Game
 			lock (_lock)
 			{
 				gameRoom.RoomId = _roomId;
+				gameRoom.MData = new Google.Protobuf.Protocol.MapSaveData();
 				_rooms.Add(_roomId, gameRoom);
 				_roomId++;
 			}

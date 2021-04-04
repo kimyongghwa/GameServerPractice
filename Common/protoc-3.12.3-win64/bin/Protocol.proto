@@ -50,8 +50,14 @@ message MapSaveData{
 message S_EnterGame {
   PlayerInfo player = 1;
 }
+
 message S_EnterRoom{
   PlayerInfo player = 1;
+}
+
+message S_MapSaveDataSend{ //when enterRoom
+  MapSave map = 1;
+  int32 index = 2;
 }
 
 message S_LeaveGame {
