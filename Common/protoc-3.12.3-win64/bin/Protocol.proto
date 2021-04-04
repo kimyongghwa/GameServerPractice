@@ -140,7 +140,7 @@ message S_RoomCreateSuccess{
 }
 
 message C_SendMapData{
-	MapSaveData mapSaves = 1;
+	MapSave mapSave = 1;
 	int32 roomId = 2;
 }
 

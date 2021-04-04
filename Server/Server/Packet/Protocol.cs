@@ -50,20 +50,20 @@ namespace Google.Protobuf.Protocol {
             "bmZvIi4KDENfQ3JlYXRlUm9vbRIMCgRuYW1lGAEgASgJEhAKCHBhc3N3b3Jk",
             "GAIgASgJIm4KE1NfUm9vbUNyZWF0ZVN1Y2Nlc3MSDwoHcGxhZXJJZBgBIAEo",
             "BRIgCgRyb29tGAIgASgLMhIuUHJvdG9jb2wuUm9vbUluZm8SJAoGcGxheWVy",
-            "GAMgASgLMhQuUHJvdG9jb2wuUGxheWVySW5mbyJICg1DX1NlbmRNYXBEYXRh",
-            "EicKCG1hcFNhdmVzGAEgASgLMhUuUHJvdG9jb2wuTWFwU2F2ZURhdGESDgoG",
-            "cm9vbUlkGAIgASgFIjIKCkNfSm9pblJvb20SDgoGcm9vbUlkGAEgASgFEhQK",
-            "DHJvb21QYXNzd29yZBgCIAEoCSqzAgoFTXNnSWQSEAoMU19FTlRFUl9HQU1F",
-            "EAASEAoMU19MRUFWRV9HQU1FEAESCwoHU19TUEFXThACEg0KCVNfREVTUEFX",
-            "ThADEgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAFEgoKBkNfREFTSBAGEgoKBlNf",
-            "REFTSBAHEgsKB0NfU0NBTEUQCBILCgdTX1NDQUxFEAkSCgoGQ19ST09NEAoS",
-            "CgoGU19ST09NEAsSEQoNQ19DUkVBVEVfUk9PTRAMEhkKFVNfUk9PTV9DUkVB",
-            "VEVfU1VDQ0VTUxANEhAKDFNfRU5URVJfUk9PTRAOEhMKD0NfU0VORF9NQVBf",
-            "REFUQRAPEg8KC0NfSk9JTl9ST09NEBASEAoMU19MRUFWRV9ST09NEBESEAoM",
-            "Q19MRUFWRV9ST09NEBIqOQoNQ3JlYXR1cmVTdGF0ZRIICgRJRExFEAASCgoG",
-            "TU9WSU5HEAESCAoESlVNUBACEggKBERBU0gQAyooCgdNb3ZlRGlyEggKBE5P",
-            "TkUQABIICgRMRUZUEAESCQoFUklHSFQQAkIbqgIYR29vZ2xlLlByb3RvYnVm",
-            "LlByb3RvY29sYgZwcm90bzM="));
+            "GAMgASgLMhQuUHJvdG9jb2wuUGxheWVySW5mbyJDCg1DX1NlbmRNYXBEYXRh",
+            "EiIKB21hcFNhdmUYASABKAsyES5Qcm90b2NvbC5NYXBTYXZlEg4KBnJvb21J",
+            "ZBgCIAEoBSIyCgpDX0pvaW5Sb29tEg4KBnJvb21JZBgBIAEoBRIUCgxyb29t",
+            "UGFzc3dvcmQYAiABKAkqswIKBU1zZ0lkEhAKDFNfRU5URVJfR0FNRRAAEhAK",
+            "DFNfTEVBVkVfR0FNRRABEgsKB1NfU1BBV04QAhINCglTX0RFU1BBV04QAxIK",
+            "CgZDX01PVkUQBBIKCgZTX01PVkUQBRIKCgZDX0RBU0gQBhIKCgZTX0RBU0gQ",
+            "BxILCgdDX1NDQUxFEAgSCwoHU19TQ0FMRRAJEgoKBkNfUk9PTRAKEgoKBlNf",
+            "Uk9PTRALEhEKDUNfQ1JFQVRFX1JPT00QDBIZChVTX1JPT01fQ1JFQVRFX1NV",
+            "Q0NFU1MQDRIQCgxTX0VOVEVSX1JPT00QDhITCg9DX1NFTkRfTUFQX0RBVEEQ",
+            "DxIPCgtDX0pPSU5fUk9PTRAQEhAKDFNfTEVBVkVfUk9PTRAREhAKDENfTEVB",
+            "VkVfUk9PTRASKjkKDUNyZWF0dXJlU3RhdGUSCAoESURMRRAAEgoKBk1PVklO",
+            "RxABEggKBEpVTVAQAhIICgREQVNIEAMqKAoHTW92ZURpchIICgROT05FEAAS",
+            "CAoETEVGVBABEgkKBVJJR0hUEAJCG6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90",
+            "b2NvbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.CreatureState), typeof(global::Google.Protobuf.Protocol.MoveDir), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Room), global::Google.Protobuf.Protocol.S_Room.Parser, new[]{ "PlayerId", "Room" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_CreateRoom), global::Google.Protobuf.Protocol.C_CreateRoom.Parser, new[]{ "Name", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_RoomCreateSuccess), global::Google.Protobuf.Protocol.S_RoomCreateSuccess.Parser, new[]{ "PlaerId", "Room", "Player" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_SendMapData), global::Google.Protobuf.Protocol.C_SendMapData.Parser, new[]{ "MapSaves", "RoomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_SendMapData), global::Google.Protobuf.Protocol.C_SendMapData.Parser, new[]{ "MapSave", "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_JoinRoom), global::Google.Protobuf.Protocol.C_JoinRoom.Parser, new[]{ "RoomId", "RoomPassword" }, null, null, null, null)
           }));
     }
@@ -3322,7 +3322,7 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public C_SendMapData(C_SendMapData other) : this() {
-      mapSaves_ = other.mapSaves_ != null ? other.mapSaves_.Clone() : null;
+      mapSave_ = other.mapSave_ != null ? other.mapSave_.Clone() : null;
       roomId_ = other.roomId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3332,14 +3332,14 @@ namespace Google.Protobuf.Protocol {
       return new C_SendMapData(this);
     }
 
-    /// <summary>Field number for the "mapSaves" field.</summary>
-    public const int MapSavesFieldNumber = 1;
-    private global::Google.Protobuf.Protocol.MapSaveData mapSaves_;
+    /// <summary>Field number for the "mapSave" field.</summary>
+    public const int MapSaveFieldNumber = 1;
+    private global::Google.Protobuf.Protocol.MapSave mapSave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.Protocol.MapSaveData MapSaves {
-      get { return mapSaves_; }
+    public global::Google.Protobuf.Protocol.MapSave MapSave {
+      get { return mapSave_; }
       set {
-        mapSaves_ = value;
+        mapSave_ = value;
       }
     }
 
@@ -3367,7 +3367,7 @@ namespace Google.Protobuf.Protocol {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(MapSaves, other.MapSaves)) return false;
+      if (!object.Equals(MapSave, other.MapSave)) return false;
       if (RoomId != other.RoomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3375,7 +3375,7 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (mapSaves_ != null) hash ^= MapSaves.GetHashCode();
+      if (mapSave_ != null) hash ^= MapSave.GetHashCode();
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3390,9 +3390,9 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (mapSaves_ != null) {
+      if (mapSave_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(MapSaves);
+        output.WriteMessage(MapSave);
       }
       if (RoomId != 0) {
         output.WriteRawTag(16);
@@ -3406,8 +3406,8 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (mapSaves_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapSaves);
+      if (mapSave_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapSave);
       }
       if (RoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomId);
@@ -3423,11 +3423,11 @@ namespace Google.Protobuf.Protocol {
       if (other == null) {
         return;
       }
-      if (other.mapSaves_ != null) {
-        if (mapSaves_ == null) {
-          MapSaves = new global::Google.Protobuf.Protocol.MapSaveData();
+      if (other.mapSave_ != null) {
+        if (mapSave_ == null) {
+          MapSave = new global::Google.Protobuf.Protocol.MapSave();
         }
-        MapSaves.MergeFrom(other.MapSaves);
+        MapSave.MergeFrom(other.MapSave);
       }
       if (other.RoomId != 0) {
         RoomId = other.RoomId;
@@ -3444,10 +3444,10 @@ namespace Google.Protobuf.Protocol {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (mapSaves_ == null) {
-              MapSaves = new global::Google.Protobuf.Protocol.MapSaveData();
+            if (mapSave_ == null) {
+              MapSave = new global::Google.Protobuf.Protocol.MapSave();
             }
-            input.ReadMessage(MapSaves);
+            input.ReadMessage(MapSave);
             break;
           }
           case 16: {

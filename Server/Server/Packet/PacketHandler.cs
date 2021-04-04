@@ -113,7 +113,7 @@ class PacketHandler
 		Console.WriteLine("SMDH!");
 		ClientSession clientSession = session as ClientSession;
 		C_SendMapData sendMapPacket = packet as C_SendMapData;
-		RoomManager.Instance.Find(sendMapPacket.RoomId).MData = sendMapPacket.MapSaves;
+		RoomManager.Instance.Find(sendMapPacket.RoomId).MData.Map.Add(sendMapPacket.MapSave);
 		if(clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
 			RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
 	}
