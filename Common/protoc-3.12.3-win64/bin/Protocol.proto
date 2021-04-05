@@ -24,6 +24,7 @@ enum MsgId {
   C_JOIN_ROOM = 16;
   S_LEAVE_ROOM = 17;
   C_LEAVE_ROOM = 18;
+  S_MAP_SAVE_DATA_SEND = 19;
 }
 
 enum CreatureState {

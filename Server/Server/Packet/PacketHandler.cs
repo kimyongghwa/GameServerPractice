@@ -136,7 +136,9 @@ class PacketHandler
 			mapSendPacket.Map = m;
 			mapSendPacket.Index = index;
 			clientSession.Send(mapSendPacket);
-        }
+			index++;
+			Console.WriteLine("MapSend : "+m.MapCell.Count);
+		}
 	}
 	public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
     {

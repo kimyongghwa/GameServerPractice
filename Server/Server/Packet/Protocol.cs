@@ -54,17 +54,18 @@ namespace Google.Protobuf.Protocol {
             "b2NvbC5Sb29tSW5mbxIkCgZwbGF5ZXIYAyABKAsyFC5Qcm90b2NvbC5QbGF5",
             "ZXJJbmZvIkMKDUNfU2VuZE1hcERhdGESIgoHbWFwU2F2ZRgBIAEoCzIRLlBy",
             "b3RvY29sLk1hcFNhdmUSDgoGcm9vbUlkGAIgASgFIjIKCkNfSm9pblJvb20S",
-            "DgoGcm9vbUlkGAEgASgFEhQKDHJvb21QYXNzd29yZBgCIAEoCSqzAgoFTXNn",
+            "DgoGcm9vbUlkGAEgASgFEhQKDHJvb21QYXNzd29yZBgCIAEoCSrNAgoFTXNn",
             "SWQSEAoMU19FTlRFUl9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAESCwoHU19T",
             "UEFXThACEg0KCVNfREVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAF",
             "EgoKBkNfREFTSBAGEgoKBlNfREFTSBAHEgsKB0NfU0NBTEUQCBILCgdTX1ND",
             "QUxFEAkSCgoGQ19ST09NEAoSCgoGU19ST09NEAsSEQoNQ19DUkVBVEVfUk9P",
             "TRAMEhkKFVNfUk9PTV9DUkVBVEVfU1VDQ0VTUxANEhAKDFNfRU5URVJfUk9P",
             "TRAOEhMKD0NfU0VORF9NQVBfREFUQRAPEg8KC0NfSk9JTl9ST09NEBASEAoM",
-            "U19MRUFWRV9ST09NEBESEAoMQ19MRUFWRV9ST09NEBIqOQoNQ3JlYXR1cmVT",
-            "dGF0ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCAoESlVNUBACEggKBERBU0gQ",
-            "AyooCgdNb3ZlRGlyEggKBE5PTkUQABIICgRMRUZUEAESCQoFUklHSFQQAkIb",
-            "qgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "U19MRUFWRV9ST09NEBESEAoMQ19MRUFWRV9ST09NEBISGAoUU19NQVBfU0FW",
+            "RV9EQVRBX1NFTkQQEyo5Cg1DcmVhdHVyZVN0YXRlEggKBElETEUQABIKCgZN",
+            "T1ZJTkcQARIICgRKVU1QEAISCAoEREFTSBADKigKB01vdmVEaXISCAoETk9O",
+            "RRAAEggKBExFRlQQARIJCgVSSUdIVBACQhuqAhhHb29nbGUuUHJvdG9idWYu",
+            "UHJvdG9jb2xiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.CreatureState), typeof(global::Google.Protobuf.Protocol.MoveDir), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,6 +120,7 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("C_JOIN_ROOM")] CJoinRoom = 16,
     [pbr::OriginalName("S_LEAVE_ROOM")] SLeaveRoom = 17,
     [pbr::OriginalName("C_LEAVE_ROOM")] CLeaveRoom = 18,
+    [pbr::OriginalName("S_MAP_SAVE_DATA_SEND")] SMapSaveDataSend = 19,
   }
 
   public enum CreatureState {
