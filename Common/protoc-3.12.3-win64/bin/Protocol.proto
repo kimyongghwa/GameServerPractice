@@ -25,6 +25,9 @@ enum MsgId {
   S_LEAVE_ROOM = 17;
   C_LEAVE_ROOM = 18;
   S_MAP_SAVE_DATA_SEND = 19;
+  S_Mob_Spawn = 20;
+  S_Mob_Despawn = 21;
+  C_Mob_Spawn = 22;
 }
 
 enum CreatureState {
@@ -113,6 +116,12 @@ message PlayerInfo {
   PositionInfo posInfo = 3;
 }
 
+message MonsterInfo {
+  int32 monsterId = 1;
+  int32 monsterNumber = 2;
+  PositionInfo posInfo = 3;
+}
+
 message PositionInfo{
 	CreatureState state = 1;
 	MoveDir moveDir= 2;
@@ -125,6 +134,16 @@ message RoomInfo{
 	int32 playerNumber = 2;
 	string name = 3;
 	string password = 4;
+}
+
+message C_MobMove{
+	int32 monsterId = 1;
+	PositionInfo posInfo = 2;
+}
+
+message S_MobMove{
+	int32 monsterId = 1;
+	PositionInfo posInfo = 2;
 }
 
 message C_Room {
@@ -154,4 +173,17 @@ message C_SendMapData{
 message C_JoinRoom{
 	int32 roomId = 1;
 	string roomPassword = 2;
+}
+
+message S_MobSpawn {
+  repeated MonsterInfo mobs = 1;
+  bool isMine = 2;
+}
+
+message S_MobDespawn {
+  repeated int32 mobIds = 1;
+}
+
+message C_MobSpawn{
+  MonsterInfo mob= 1;
 }

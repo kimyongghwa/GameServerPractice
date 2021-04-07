@@ -11,4 +11,10 @@ namespace Server.Game
 		public GameRoom Room { get; set; }
 		public ClientSession Session { get; set; }
 	}
+	public class Monster
+    {
+		public MonsterInfo Info { get; set; } = new MonsterInfo() { PosInfo = new PositionInfo() };
+		public GameRoom Room { get; set; }
+		public ClientSession Session { get; set; }
+	}
 }

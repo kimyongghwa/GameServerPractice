@@ -145,4 +145,29 @@ class PacketHandler
 		ClientSession clientSession = session as ClientSession;
 		clientSession.MyPlayer.Room.LeaveRoom(clientSession.MyPlayer.Info.PlayerId);
 	}
+
+	public static void C_MobSpawnHandler(PacketSession session, IMessage packet)
+    {
+		ClientSession clientSession = session as ClientSession;
+		C_MobSpawn monsterPacket = packet as C_MobSpawn;
+		Monster monster = PlayerManager.Instance.AddMob();
+        {
+			monster.Info = monsterPacket.Mob;
+			monster.Session = clientSession;
+			clientSession.MyPlayer.Room.EnterMob(monster);
+        }
+		
+		//나 말고 방안의 모든플레이어에게 전송
+		S_MobSpawn mobSpawnPacket = new S_MobSpawn();
+		mobSpawnPacket.Mobs.Add(monster.Info);
+		mobSpawnPacket.IsMine = false;
+		foreach (Player p in clientSession.MyPlayer.Room._Players)
+		{
+			if (clientSession.MyPlayer != p)
+				p.Session.Send(mobSpawnPacket);
+		}
+		//나에겐 내 몬스터 체크해서 전송
+		mobSpawnPacket.IsMine = true;
+		clientSession.Send(mobSpawnPacket);
+	}
 }

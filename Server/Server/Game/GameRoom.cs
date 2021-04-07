@@ -14,6 +14,7 @@ namespace Server.Game
 		public string Password { get; set; }
 		public MapSaveData MData { get; set; }
 		List<Player> _players = new List<Player>();
+		List<Monster> _monsters = new List<Monster>();
 		public int PlayerNumber
         {
             get
@@ -21,7 +22,10 @@ namespace Server.Game
 				return _players.Count;
             }
         }
-		public void EnterRoom(Player newPlayer)
+
+        public List<Player> _Players { get => _players; set => _players = value; }
+
+        public void EnterRoom(Player newPlayer)
 		{
 			if (newPlayer == null)
 				return;
@@ -67,6 +71,26 @@ namespace Server.Game
 			{
 				_players.Add(newPlayer);
 				newPlayer.Room = this;
+			}
+		}
+		public void EnterMob(Monster newMonster)
+		{
+			if(newMonster == null)
+				return;
+			lock (_lock)
+			{
+				_monsters.Add(newMonster);
+				newMonster.Room = this;
+				// 타인한테 정보 전송
+				{
+					S_MobSpawn spawnMobPacket = new S_MobSpawn();
+					spawnMobPacket.Mobs.Add(newMonster.Info);
+					foreach (Player p in _players)
+					{
+						if (newMonster.Session != p.Session)
+							p.Session.Send(spawnMobPacket);
+					}
+				}
 			}
 		}
 		public void LeaveGame(int playerId)
