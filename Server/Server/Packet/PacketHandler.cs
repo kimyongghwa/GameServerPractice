@@ -91,7 +91,7 @@ class PacketHandler
 	}
 
 	public static void C_CreateRoomHandler(PacketSession session, IMessage packet)
-    {
+	{
 		Console.WriteLine("CreateRoom!");
 		ClientSession clientSession = session as ClientSession;
 		C_CreateRoom createRoomPacket = packet as C_CreateRoom;
@@ -107,56 +107,56 @@ class PacketHandler
 		roomSuccessPacket.Player = new PlayerInfo();
 		roomSuccessPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(roomSuccessPacket);
-    }
+	}
 
 	public static void C_SendMapDataHandler(PacketSession session, IMessage packet)
-    {
+	{
 		Console.WriteLine("SMDH!");
 		ClientSession clientSession = session as ClientSession;
 		C_SendMapData sendMapPacket = packet as C_SendMapData;
 		RoomManager.Instance.Find(sendMapPacket.RoomId).MData.Map.Add(sendMapPacket.MapSave);
-		if(clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
+		if (clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
 			RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
 	}
 
 	public static void C_JoinRoomHandler(PacketSession session, IMessage packet)
-    {
+	{
 		ClientSession clientSession = session as ClientSession;
 		C_JoinRoom joinPacket = packet as C_JoinRoom;
 		Console.WriteLine("Joinroom " + joinPacket.RoomId);
 		//TODO 비밀번호 체크
 		RoomManager.Instance.Find(joinPacket.RoomId).EnterRoom(clientSession.MyPlayer);
-		S_EnterRoom enterRoomPacket = new S_EnterRoom(); 
+		S_EnterRoom enterRoomPacket = new S_EnterRoom();
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
 		S_MapSaveDataSend mapSendPacket = new S_MapSaveDataSend();
 		int index = 0;
-        foreach (MapSave m in clientSession.MyPlayer.Room.MData.Map)
-        {
+		foreach (MapSave m in clientSession.MyPlayer.Room.MData.Map)
+		{
 			mapSendPacket.Map = m;
 			mapSendPacket.Index = index;
 			clientSession.Send(mapSendPacket);
 			index++;
-			Console.WriteLine("MapSend : "+m.MapCell.Count);
+			Console.WriteLine("MapSend : " + m.MapCell.Count);
 		}
 	}
 	public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
-    {
+	{
 		ClientSession clientSession = session as ClientSession;
 		clientSession.MyPlayer.Room.LeaveRoom(clientSession.MyPlayer.Info.PlayerId);
 	}
 
 	public static void C_MobSpawnHandler(PacketSession session, IMessage packet)
-    {
+	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobSpawn monsterPacket = packet as C_MobSpawn;
 		Monster monster = PlayerManager.Instance.AddMob();
-        {
+		{
 			monster.Info = monsterPacket.Mob;
 			monster.Session = clientSession;
 			clientSession.MyPlayer.Room.EnterMob(monster);
-        }
-		
+		}
+
 		//나 말고 방안의 모든플레이어에게 전송
 		S_MobSpawn mobSpawnPacket = new S_MobSpawn();
 		mobSpawnPacket.Mobs.Add(monster.Info);
@@ -169,5 +169,23 @@ class PacketHandler
 		//나에겐 내 몬스터 체크해서 전송
 		mobSpawnPacket.IsMine = true;
 		clientSession.Send(mobSpawnPacket);
+	}
+
+	public static void C_MobMoveHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_MobMove monsterPacket = packet as C_MobMove;
+		S_MobMove sMonsterPacket = packet as S_MobMove;
+		sMonsterPacket.MonsterId = monsterPacket.MonsterId;
+		sMonsterPacket.PosInfo = monsterPacket.PosInfo;
+		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
+	}
+	public static void C_MobAtkHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_MobAtk monsterPacket = packet as C_MobAtk;
+		S_MobAtk sMonsterPacket = packet as S_MobAtk;
+		sMonsterPacket.MobId= monsterPacket.MobId;
+		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 }

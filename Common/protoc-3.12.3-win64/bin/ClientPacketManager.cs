@@ -50,7 +50,11 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SMobSpawn, MakePacket<S_MobSpawn>);
 		_handler.Add((ushort)MsgId.SMobSpawn, PacketHandler.S_MobSpawnHandler);		
 		_onRecv.Add((ushort)MsgId.SMobDespawn, MakePacket<S_MobDespawn>);
-		_handler.Add((ushort)MsgId.SMobDespawn, PacketHandler.S_MobDespawnHandler);
+		_handler.Add((ushort)MsgId.SMobDespawn, PacketHandler.S_MobDespawnHandler);		
+		_onRecv.Add((ushort)MsgId.SMobMove, MakePacket<S_MobMove>);
+		_handler.Add((ushort)MsgId.SMobMove, PacketHandler.S_MobMoveHandler);		
+		_onRecv.Add((ushort)MsgId.SMobAtk, MakePacket<S_MobAtk>);
+		_handler.Add((ushort)MsgId.SMobAtk, PacketHandler.S_MobAtkHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)
