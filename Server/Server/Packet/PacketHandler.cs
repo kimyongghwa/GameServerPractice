@@ -14,7 +14,7 @@ class PacketHandler
 		C_Move movePacket = packet as C_Move;
 		ClientSession clientSession = session as ClientSession;
 
-		Console.WriteLine($"C_Move({movePacket.PosInfo.PosX}, {movePacket.PosInfo.PosY})");
+		//Console.WriteLine($"C_Move({movePacket.PosInfo.PosX}, {movePacket.PosInfo.PosY})");
 
 		if (clientSession.MyPlayer == null)
 			return;
@@ -152,30 +152,33 @@ class PacketHandler
 		C_MobSpawn monsterPacket = packet as C_MobSpawn;
 		Monster monster = PlayerManager.Instance.AddMob();
 		{
+			int mobIdTmp = monster.Info.MonsterId;
 			monster.Info = monsterPacket.Mob;
+			monster.Info.MonsterId = mobIdTmp;
 			monster.Session = clientSession;
-			clientSession.MyPlayer.Room.EnterMob(monster);
+			clientSession.MyPlayer.Room.EnterMob(monster, clientSession); //EnterMob 내에서 전송한다.
 		}
-
-		//나 말고 방안의 모든플레이어에게 전송
-		S_MobSpawn mobSpawnPacket = new S_MobSpawn();
-		mobSpawnPacket.Mobs.Add(monster.Info);
-		mobSpawnPacket.IsMine = false;
-		foreach (Player p in clientSession.MyPlayer.Room._Players)
-		{
-			if (clientSession.MyPlayer != p)
-				p.Session.Send(mobSpawnPacket);
-		}
-		//나에겐 내 몬스터 체크해서 전송
-		mobSpawnPacket.IsMine = true;
-		clientSession.Send(mobSpawnPacket);
+		////나 말고 방안의 모든플레이어에게 전송
+		//S_MobSpawn mobSpawnPacket = new S_MobSpawn();
+		//mobSpawnPacket.Mobs.Add(monster.Info);
+		//mobSpawnPacket.IsMine = false;
+		//Console.WriteLine($"mobid = {monster.Info.MonsterId}");
+		//foreach (Player p in clientSession.MyPlayer.Room._Players)
+		//{
+		//	if (clientSession.MyPlayer !=9 p)
+		//		p.Session.Send(mobSpawnPacket);
+		//}
+		////나에겐 내 몬스터 체크해서 전송
+		//mobSpawnPacket.IsMine = true;
+		//clientSession.Send(mobSpawnPacket);
 	}
 
 	public static void C_MobMoveHandler(PacketSession session, IMessage packet)
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobMove monsterPacket = packet as C_MobMove;
-		S_MobMove sMonsterPacket = packet as S_MobMove;
+		Console.WriteLine($"cmobmove{monsterPacket.PosInfo.PosX}, {monsterPacket.PosInfo.PosY}");
+		S_MobMove sMonsterPacket = new S_MobMove();
 		sMonsterPacket.MonsterId = monsterPacket.MonsterId;
 		sMonsterPacket.PosInfo = monsterPacket.PosInfo;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
@@ -184,7 +187,7 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobAtk monsterPacket = packet as C_MobAtk;
-		S_MobAtk sMonsterPacket = packet as S_MobAtk;
+		S_MobAtk sMonsterPacket = new S_MobAtk();
 		sMonsterPacket.MobId= monsterPacket.MobId;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}

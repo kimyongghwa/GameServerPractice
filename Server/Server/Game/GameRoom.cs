@@ -73,7 +73,7 @@ namespace Server.Game
 				newPlayer.Room = this;
 			}
 		}
-		public void EnterMob(Monster newMonster)
+		public void EnterMob(Monster newMonster, ClientSession clientSession)
 		{
 			if(newMonster == null)
 				return;
@@ -81,16 +81,21 @@ namespace Server.Game
 			{
 				_monsters.Add(newMonster);
 				newMonster.Room = this;
-				// 타인한테 정보 전송
+
+
+				//나 말고 방안의 모든플레이어에게 전송
+				S_MobSpawn mobSpawnPacket = new S_MobSpawn();
+				mobSpawnPacket.Mobs.Add(newMonster.Info);
+				mobSpawnPacket.IsMine = false;
+				Console.WriteLine($"mob: {newMonster.Info.MonsterId}");
+				foreach (Player p in clientSession.MyPlayer.Room._Players)
 				{
-					S_MobSpawn spawnMobPacket = new S_MobSpawn();
-					spawnMobPacket.Mobs.Add(newMonster.Info);
-					foreach (Player p in _players)
-					{
-						if (newMonster.Session != p.Session)
-							p.Session.Send(spawnMobPacket);
-					}
+					if (clientSession.MyPlayer != p)
+						p.Session.Send(mobSpawnPacket);
 				}
+				//나에겐 내 몬스터 체크해서 전송
+				mobSpawnPacket.IsMine = true;
+				clientSession.Send(mobSpawnPacket);
 			}
 		}
 		public void LeaveGame(int playerId)

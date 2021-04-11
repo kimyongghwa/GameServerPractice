@@ -57,7 +57,7 @@ namespace Server.Game
 				_monsters.Add(_mobId, monster);
 				_mobId++;
 			}
-
+			//Console.WriteLine("MobIDBeforeCreate : " + _mobId);
 			return monster;
 		}
 
