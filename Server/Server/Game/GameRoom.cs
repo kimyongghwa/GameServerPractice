@@ -24,6 +24,7 @@ namespace Server.Game
         }
 
         public List<Player> _Players { get => _players; set => _players = value; }
+        public List<Monster> _Monsters { get => _monsters; set => _monsters = value; }
 
         public void EnterRoom(Player newPlayer)
 		{

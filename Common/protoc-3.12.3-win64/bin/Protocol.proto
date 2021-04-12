@@ -28,10 +28,11 @@ enum MsgId {
   S_Mob_Spawn = 20;
   S_Mob_Despawn = 21;
   C_Mob_Spawn = 22;
-  S_Mob_Move = 23;
-  C_Mob_Move = 24;
-  S_Mob_Atk = 25;
-  C_Mob_Atk = 26;
+  C_Mob_Despawn = 23;
+  S_Mob_Move = 24;
+  C_Mob_Move = 25;
+  S_Mob_Atk = 26;
+  C_Mob_Atk = 27;
 }
 
 enum CreatureState {
@@ -190,6 +191,10 @@ message S_MobDespawn {
 
 message C_MobSpawn{
   MonsterInfo mob= 1;
+}
+
+message C_MobDespawn {
+  repeated int32 mobIds = 1;
 }
 
 message S_MobAtk{

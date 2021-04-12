@@ -139,6 +139,12 @@ class PacketHandler
 			index++;
 			Console.WriteLine("MapSend : " + m.MapCell.Count);
 		}
+		S_MobSpawn mobSpawnPacket = new S_MobSpawn();
+		foreach (Monster m in clientSession.MyPlayer.Room._Monsters)
+		{
+			mobSpawnPacket.Mobs.Add(m.Info);
+		}
+		clientSession.Send(mobSpawnPacket);
 	}
 	public static void C_LeaveRoomHandler(PacketSession session, IMessage packet)
 	{
@@ -172,8 +178,17 @@ class PacketHandler
 		//mobSpawnPacket.IsMine = true;
 		//clientSession.Send(mobSpawnPacket);
 	}
-
-	public static void C_MobMoveHandler(PacketSession session, IMessage packet)
+	public static void C_MobDespawnHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_MobDespawn mobDespawnPacket = packet as C_MobDespawn;
+		S_MobDespawn sMobDespawnPacket = new S_MobDespawn();
+		foreach (int id in mobDespawnPacket.MobIds) {
+			sMobDespawnPacket.MobIds.Add(id);
+		}
+		clientSession.MyPlayer.Room.Broadcast(sMobDespawnPacket);
+	}
+		public static void C_MobMoveHandler(PacketSession session, IMessage packet)
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobMove monsterPacket = packet as C_MobMove;
