@@ -204,6 +204,7 @@ class PacketHandler
 		C_MobAtk monsterPacket = packet as C_MobAtk;
 		S_MobAtk sMonsterPacket = new S_MobAtk();
 		sMonsterPacket.MobId= monsterPacket.MobId;
+		sMonsterPacket.GapVector = monsterPacket.GapVector;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 }

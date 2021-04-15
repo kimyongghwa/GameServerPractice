@@ -197,10 +197,17 @@ message C_MobDespawn {
   repeated int32 mobIds = 1;
 }
 
+message ProtoVector{
+	float posX = 1;
+	float posY = 2;
+}
+
 message S_MobAtk{
 	int32 mobId = 1;
+	ProtoVector gapVector = 2;
 }
 
 message C_MobAtk{
 	int32 mobId = 1;
+	ProtoVector gapVector = 2;
 }
