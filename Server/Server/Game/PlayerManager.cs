@@ -11,8 +11,10 @@ namespace Server.Game
 		object _lock = new object();
 		Dictionary<int, Player> _players = new Dictionary<int, Player>();
 		Dictionary<int, Monster> _monsters = new Dictionary<int, Monster>();
+		Dictionary<int, Monster> _bossMonsters = new Dictionary<int, Monster>();
 		public int _playerId = 1; // TODO
 		public int _mobId = 1; // TODO
+		public int _bossMobId = 1; // TODO
 		public Player Add()
 		{
 			Player player = new Player();
@@ -80,5 +82,38 @@ namespace Server.Game
 				return null;
 			}
 		}
-	}
+		public Monster AddBossMob()
+		{
+			Monster monster = new Monster();
+
+			lock (_lock)
+			{
+				monster.Info.MonsterId = _mobId;
+				_bossMonsters.Add(_mobId, monster);
+				_bossMobId++;
+			}
+			//Console.WriteLine("MobIDBeforeCreate : " + _mobId);
+			return monster;
+		}
+
+		public bool RemoveBossMob(int mobId)
+		{
+			lock (_lock)
+			{
+				return _bossMonsters.Remove(mobId);
+			}
+		}
+
+		public Monster FindBossMob(int mobId)
+		{
+			lock (_lock)
+			{
+				Monster monster = null;
+				if (_bossMonsters.TryGetValue(mobId, out monster))
+					return monster;
+
+				return null;
+			}
+		}
+}
 }

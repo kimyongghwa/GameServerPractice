@@ -9,6 +9,7 @@ namespace Server.Game
 	public class GameRoom
 	{
 		object _lock = new object();
+		public bool isCreating = true;
 		public int RoomId { get; set; }
 		public string RoomName { get; set; }
 		public string Password { get; set; }

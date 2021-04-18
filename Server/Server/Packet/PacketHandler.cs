@@ -9,6 +9,8 @@ using System.Text;
 
 class PacketHandler
 {
+	public static readonly int mapCounter = 3;
+
 	public static void C_MoveHandler(PacketSession session, IMessage packet)
 	{
 		C_Move movePacket = packet as C_Move;
@@ -114,7 +116,10 @@ class PacketHandler
 		Console.WriteLine("SMDH!");
 		ClientSession clientSession = session as ClientSession;
 		C_SendMapData sendMapPacket = packet as C_SendMapData;
-		RoomManager.Instance.Find(sendMapPacket.RoomId).MData.Map.Add(sendMapPacket.MapSave);
+		GameRoom gameRoom = RoomManager.Instance.Find(sendMapPacket.RoomId);
+		gameRoom.MData.Map.Add(sendMapPacket.MapSave);
+		if (gameRoom.MData.Map.Count >= mapCounter)
+			gameRoom.isCreating = false;
 		if (clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
 			RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
 	}
@@ -124,8 +129,11 @@ class PacketHandler
 		ClientSession clientSession = session as ClientSession;
 		C_JoinRoom joinPacket = packet as C_JoinRoom;
 		Console.WriteLine("Joinroom " + joinPacket.RoomId);
+		GameRoom gameRoom = RoomManager.Instance.Find(joinPacket.RoomId);
+		if (gameRoom.isCreating)
+			return;
 		//TODO 비밀번호 체크
-		RoomManager.Instance.Find(joinPacket.RoomId).EnterRoom(clientSession.MyPlayer);
+		gameRoom.EnterRoom(clientSession.MyPlayer);
 		S_EnterRoom enterRoomPacket = new S_EnterRoom();
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
@@ -192,7 +200,11 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobMove monsterPacket = packet as C_MobMove;
+		//서버에서 이동
+		PlayerManager.Instance.FindMob(monsterPacket.MonsterId).Info.PosInfo.PosX = monsterPacket.PosInfo.PosX;
+		PlayerManager.Instance.FindMob(monsterPacket.MonsterId).Info.PosInfo.PosY = monsterPacket.PosInfo.PosY;
 		Console.WriteLine($"cmobmove{monsterPacket.PosInfo.PosX}, {monsterPacket.PosInfo.PosY}");
+		//모두에게 전송
 		S_MobMove sMonsterPacket = new S_MobMove();
 		sMonsterPacket.MonsterId = monsterPacket.MonsterId;
 		sMonsterPacket.PosInfo = monsterPacket.PosInfo;
@@ -205,6 +217,34 @@ class PacketHandler
 		S_MobAtk sMonsterPacket = new S_MobAtk();
 		sMonsterPacket.MobId= monsterPacket.MobId;
 		sMonsterPacket.GapVector = monsterPacket.GapVector;
+		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
+	}
+	public static void C_ShopHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_Shop shopPacket = packet as C_Shop;
+		S_Shop sShopPacket = new S_Shop();
+		sShopPacket.ShopPos = shopPacket.ShopPos;
+		sShopPacket.ShopRank = shopPacket.ShopRank;
+		clientSession.MyPlayer.Room.Broadcast(sShopPacket);
+	}
+	public static void C_BossPatternHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_BossPattern patternPacket = packet as C_BossPattern;
+		S_BossPattern sPatternPacket = new S_BossPattern();
+		sPatternPacket.BossId = patternPacket.BossId;
+		sPatternPacket.BossPattern = patternPacket.BossPattern;
+		clientSession.MyPlayer.Room.Broadcast(sPatternPacket);
+	}
+		public static void C_BossMobMoveHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_BossMobMove monsterPacket = packet as C_BossMobMove;
+		//모두에게 전송
+		S_BossMobMove sMonsterPacket = new S_BossMobMove();
+		sMonsterPacket.BossId = monsterPacket.BossId;
+		sMonsterPacket.PosInfo = monsterPacket.PosInfo;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 }

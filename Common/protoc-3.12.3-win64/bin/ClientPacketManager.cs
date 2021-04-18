@@ -54,7 +54,17 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SMobMove, MakePacket<S_MobMove>);
 		_handler.Add((ushort)MsgId.SMobMove, PacketHandler.S_MobMoveHandler);		
 		_onRecv.Add((ushort)MsgId.SMobAtk, MakePacket<S_MobAtk>);
-		_handler.Add((ushort)MsgId.SMobAtk, PacketHandler.S_MobAtkHandler);
+		_handler.Add((ushort)MsgId.SMobAtk, PacketHandler.S_MobAtkHandler);		
+		_onRecv.Add((ushort)MsgId.SShop, MakePacket<S_Shop>);
+		_handler.Add((ushort)MsgId.SShop, PacketHandler.S_ShopHandler);		
+		_onRecv.Add((ushort)MsgId.SBossPattern, MakePacket<S_BossPattern>);
+		_handler.Add((ushort)MsgId.SBossPattern, PacketHandler.S_BossPatternHandler);		
+		_onRecv.Add((ushort)MsgId.SBossMobMove, MakePacket<S_BossMobMove>);
+		_handler.Add((ushort)MsgId.SBossMobMove, PacketHandler.S_BossMobMoveHandler);		
+		_onRecv.Add((ushort)MsgId.SMobHit, MakePacket<S_MobHit>);
+		_handler.Add((ushort)MsgId.SMobHit, PacketHandler.S_MobHitHandler);		
+		_onRecv.Add((ushort)MsgId.SHit, MakePacket<S_Hit>);
+		_handler.Add((ushort)MsgId.SHit, PacketHandler.S_HitHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

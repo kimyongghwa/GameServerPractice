@@ -33,6 +33,16 @@ enum MsgId {
   C_Mob_Move = 25;
   S_Mob_Atk = 26;
   C_Mob_Atk = 27;
+  S_SHOP = 28;
+  C_SHOP = 29;
+  S_BOSS_PATTERN = 30;
+  C_BOSS_PATTERN = 31;
+  S_BOSS_MOB_MOVE = 32;
+  C_BOSS_MOB_MOVE = 33;
+  S_MOB_HIT = 34;
+  C_MOB_HIT = 35;
+  S_HIT = 36;
+  C_HIT = 37;
 }
 
 enum CreatureState {
@@ -210,4 +220,54 @@ message S_MobAtk{
 message C_MobAtk{
 	int32 mobId = 1;
 	ProtoVector gapVector = 2;
+}
+
+message S_Shop{
+	ProtoVector shopPos = 1;
+	int32 shopRank = 2;
+}
+
+message C_Shop{
+	ProtoVector shopPos = 1;
+	int32 shopRank = 2;
+}
+
+message S_BossPattern{
+	int32 bossId = 1;
+	int32 bossPattern = 2;
+}
+
+message C_BossPattern{
+	int32 bossId = 1;
+	int32 bossPattern = 2;
+}
+
+message C_BossMobMove{
+	int32 bossId = 1;
+	PositionInfo posInfo = 2;
+}
+
+message S_BossMobMove{
+	int32 bossId = 1;
+	PositionInfo posInfo = 2;
+}
+
+message C_MobHit{
+	int32 mobId = 1;
+	int32 damage = 2;
+}
+
+message S_MobHit{
+	int32 mobId = 1;
+	int32 damage = 2;
+}
+
+message C_Hit{
+	int32 playerId = 1;
+	int32 damage = 2;
+}
+
+message S_Hit{
+	int32 playerId = 1;
+	int32 damage = 2;
 }

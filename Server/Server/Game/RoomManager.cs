@@ -26,6 +26,18 @@ namespace Server.Game
 			
 			return gameRoom;
 		}
+		public GameRoom Add(GameRoom gameRoom)
+		{
+			lock (_lock)
+			{
+				gameRoom.RoomId = _roomId;
+				gameRoom.MData = new Google.Protobuf.Protocol.MapSaveData();
+				_rooms.Add(_roomId, gameRoom);
+				_roomId++;
+			}
+
+			return gameRoom;
+		}
 
 		public bool Remove(int roomId)
 		{
