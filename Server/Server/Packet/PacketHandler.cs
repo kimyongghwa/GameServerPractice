@@ -252,10 +252,19 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobHit monsterPacket = packet as C_MobHit;
+		S_MobHit sMonsterPacket = new S_MobHit();
+		sMonsterPacket.Damage = monsterPacket.Damage;
+		sMonsterPacket.MobId = monsterPacket.MobId;
+		sMonsterPacket.IsBoss = monsterPacket.IsBoss;
+		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 	public static void C_HitHandler(PacketSession session, IMessage packet)
 	{
 		ClientSession clientSession = session as ClientSession;
-		C_MobHit monsterPacket = packet as C_MobHit;
+		C_Hit hitPacket = packet as C_Hit;
+		S_Hit sHitPacket = new S_Hit();
+		sHitPacket.Damage = hitPacket.Damage;
+		sHitPacket.PlayerId = hitPacket.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(sHitPacket);
 	}
 }

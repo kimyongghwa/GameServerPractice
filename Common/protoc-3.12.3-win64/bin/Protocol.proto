@@ -255,11 +255,13 @@ message S_BossMobMove{
 message C_MobHit{
 	int32 mobId = 1;
 	int32 damage = 2;
+	bool isBoss = 3;
 }
 
 message S_MobHit{
 	int32 mobId = 1;
 	int32 damage = 2;
+	bool isBoss = 3;
 }
 
 message C_Hit{
