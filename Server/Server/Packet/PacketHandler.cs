@@ -191,12 +191,13 @@ class PacketHandler
 		ClientSession clientSession = session as ClientSession;
 		C_MobDespawn mobDespawnPacket = packet as C_MobDespawn;
 		S_MobDespawn sMobDespawnPacket = new S_MobDespawn();
-		foreach (int id in mobDespawnPacket.MobIds) {
+		foreach (int id in mobDespawnPacket.MobIds)
+		{
 			sMobDespawnPacket.MobIds.Add(id);
 		}
 		clientSession.MyPlayer.Room.Broadcast(sMobDespawnPacket);
 	}
-		public static void C_MobMoveHandler(PacketSession session, IMessage packet)
+	public static void C_MobMoveHandler(PacketSession session, IMessage packet)
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MobMove monsterPacket = packet as C_MobMove;
@@ -215,7 +216,7 @@ class PacketHandler
 		ClientSession clientSession = session as ClientSession;
 		C_MobAtk monsterPacket = packet as C_MobAtk;
 		S_MobAtk sMonsterPacket = new S_MobAtk();
-		sMonsterPacket.MobId= monsterPacket.MobId;
+		sMonsterPacket.MobId = monsterPacket.MobId;
 		sMonsterPacket.GapVector = monsterPacket.GapVector;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
@@ -237,7 +238,7 @@ class PacketHandler
 		sPatternPacket.BossPattern = patternPacket.BossPattern;
 		clientSession.MyPlayer.Room.Broadcast(sPatternPacket);
 	}
-		public static void C_BossMobMoveHandler(PacketSession session, IMessage packet)
+	public static void C_BossMobMoveHandler(PacketSession session, IMessage packet)
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_BossMobMove monsterPacket = packet as C_BossMobMove;
@@ -246,5 +247,15 @@ class PacketHandler
 		sMonsterPacket.BossId = monsterPacket.BossId;
 		sMonsterPacket.PosInfo = monsterPacket.PosInfo;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
+	}
+	public static void C_MobHitHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_MobHit monsterPacket = packet as C_MobHit;
+	}
+	public static void C_HitHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_MobHit monsterPacket = packet as C_MobHit;
 	}
 }
