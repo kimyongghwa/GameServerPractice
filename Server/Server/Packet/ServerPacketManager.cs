@@ -52,7 +52,11 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CBossPattern, MakePacket<C_BossPattern>);
 		_handler.Add((ushort)MsgId.CBossPattern, PacketHandler.C_BossPatternHandler);		
 		_onRecv.Add((ushort)MsgId.CBossMobMove, MakePacket<C_BossMobMove>);
-		_handler.Add((ushort)MsgId.CBossMobMove, PacketHandler.C_BossMobMoveHandler);
+		_handler.Add((ushort)MsgId.CBossMobMove, PacketHandler.C_BossMobMoveHandler);		
+		_onRecv.Add((ushort)MsgId.CMobHit, MakePacket<C_MobHit>);
+		_handler.Add((ushort)MsgId.CMobHit, PacketHandler.C_MobHitHandler);		
+		_onRecv.Add((ushort)MsgId.CHit, MakePacket<C_Hit>);
+		_handler.Add((ushort)MsgId.CHit, PacketHandler.C_HitHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)
