@@ -43,6 +43,8 @@ enum MsgId {
   C_MOB_HIT = 35;
   S_HIT = 36;
   C_HIT = 37;
+  S_WEAFON_CHANGE = 38;
+  C_WEAFON_CHANGE = 39;
 }
 
 enum CreatureState {
@@ -129,6 +131,9 @@ message PlayerInfo {
   int32 playerId = 1;
   string name = 2;
   PositionInfo posInfo = 3;
+  int32 leftHp = 4;
+  int32 weafonNum = 5;
+  int32 chNum = 6;
 }
 
 message MonsterInfo {
@@ -265,11 +270,19 @@ message S_MobHit{
 }
 
 message C_Hit{
-	int32 playerId = 1;
-	int32 damage = 2;
+	int32 damage = 1;
 }
 
 message S_Hit{
 	int32 playerId = 1;
 	int32 damage = 2;
+}
+
+message C_WeafonChange{
+	int32 weafonNum = 1;
+}
+
+message S_WeafonChange{
+	int32 playerId = 1;
+	int32 weafonNum = 2;
 }

@@ -64,7 +64,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SMobHit, MakePacket<S_MobHit>);
 		_handler.Add((ushort)MsgId.SMobHit, PacketHandler.S_MobHitHandler);		
 		_onRecv.Add((ushort)MsgId.SHit, MakePacket<S_Hit>);
-		_handler.Add((ushort)MsgId.SHit, PacketHandler.S_HitHandler);
+		_handler.Add((ushort)MsgId.SHit, PacketHandler.S_HitHandler);		
+		_onRecv.Add((ushort)MsgId.SWeafonChange, MakePacket<S_WeafonChange>);
+		_handler.Add((ushort)MsgId.SWeafonChange, PacketHandler.S_WeafonChangeHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

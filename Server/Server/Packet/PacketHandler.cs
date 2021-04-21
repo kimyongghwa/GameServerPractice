@@ -264,7 +264,16 @@ class PacketHandler
 		C_Hit hitPacket = packet as C_Hit;
 		S_Hit sHitPacket = new S_Hit();
 		sHitPacket.Damage = hitPacket.Damage;
-		sHitPacket.PlayerId = hitPacket.PlayerId;
+		sHitPacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
 		clientSession.MyPlayer.Room.Broadcast(sHitPacket);
+	}
+	public static void C_WeafonChangeHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		C_WeafonChange weafonChagnePacket = packet as C_WeafonChange;
+		S_WeafonChange sWeafonChangePacket = new S_WeafonChange();
+		sWeafonChangePacket.WeafonNum = clientSession.MyPlayer.Info.WeafonNum = weafonChagnePacket.WeafonNum;
+		sWeafonChangePacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(sWeafonChangePacket);
 	}
 }
