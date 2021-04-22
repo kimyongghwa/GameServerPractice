@@ -86,7 +86,8 @@ class PacketHandler
 			RoomInfo roomInfo = new RoomInfo();
 			roomInfo.PlayerNumber = RoomManager.Instance.Find(i).PlayerNumber;
 			roomInfo.RoomId = i;
-			roomInfo.Name = "Test Room";
+			roomInfo.Name = RoomManager.Instance.Find(i).RoomName;
+			roomInfo.Password = RoomManager.Instance.Find(i).Password;
 			roomPacket.Room.Add(roomInfo);
 		}
 		clientSession.Send(roomPacket);
