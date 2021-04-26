@@ -108,6 +108,7 @@ class PacketHandler
 		roomSuccessPacket.Room.RoomId = room.RoomId;
 		roomSuccessPacket.Room.PlayerNumber = 0;
 		roomSuccessPacket.Player = new PlayerInfo();
+		clientSession.MyPlayer.Info.ChNum = createRoomPacket.ChNum;
 		roomSuccessPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(roomSuccessPacket);
 	}
@@ -136,6 +137,7 @@ class PacketHandler
 		//TODO 비밀번호 체크
 		gameRoom.EnterRoom(clientSession.MyPlayer);
 		S_EnterRoom enterRoomPacket = new S_EnterRoom();
+		clientSession.MyPlayer.Info.ChNum = joinPacket.ChNum;
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
 		S_MapSaveDataSend mapSendPacket = new S_MapSaveDataSend();
@@ -174,7 +176,8 @@ class PacketHandler
 			clientSession.MyPlayer.Room.EnterMob(monster, clientSession); //EnterMob 내에서 전송한다.
 		}
 		////나 말고 방안의 모든플레이어에게 전송
-		//S_MobSpawn mobSpawnPacket = new S_MobSpawn();
+		//S_
+		//mobSpawnPacket = new S_MobSpawn();
 		//mobSpawnPacket.Mobs.Add(monster.Info);
 		//mobSpawnPacket.IsMine = false;
 		//Console.WriteLine($"mobid = {monster.Info.MonsterId}");

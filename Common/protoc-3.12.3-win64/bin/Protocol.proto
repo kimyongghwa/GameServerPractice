@@ -177,6 +177,7 @@ message S_Room {
 message C_CreateRoom{
 	string name = 1;
 	string password = 2;
+	int32 chNum = 3;
 }
 
 message S_RoomCreateSuccess{
@@ -193,6 +194,7 @@ message C_SendMapData{
 message C_JoinRoom{
 	int32 roomId = 1;
 	string roomPassword = 2;
+	int32 chNum = 3;
 }
 
 message S_MobSpawn {
