@@ -222,11 +222,13 @@ message ProtoVector{
 message S_MobAtk{
 	int32 mobId = 1;
 	ProtoVector gapVector = 2;
+	bool isBoss = 3;
 }
 
 message C_MobAtk{
 	int32 mobId = 1;
 	ProtoVector gapVector = 2;
+	bool isBoss = 3;
 }
 
 message S_Shop{

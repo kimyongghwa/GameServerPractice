@@ -222,6 +222,7 @@ class PacketHandler
 		S_MobAtk sMonsterPacket = new S_MobAtk();
 		sMonsterPacket.MobId = monsterPacket.MobId;
 		sMonsterPacket.GapVector = monsterPacket.GapVector;
+		sMonsterPacket.IsBoss = monsterPacket.IsBoss;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 	public static void C_ShopHandler(PacketSession session, IMessage packet)
