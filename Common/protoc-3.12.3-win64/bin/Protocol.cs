@@ -85,25 +85,28 @@ namespace Google.Protobuf.Protocol {
             "GAMgASgIIhcKBUNfSGl0Eg4KBmRhbWFnZRgBIAEoBSIpCgVTX0hpdBIQCghw",
             "bGF5ZXJJZBgBIAEoBRIOCgZkYW1hZ2UYAiABKAUiIwoOQ19XZWFmb25DaGFu",
             "Z2USEQoJd2VhZm9uTnVtGAEgASgFIjUKDlNfV2VhZm9uQ2hhbmdlEhAKCHBs",
-            "YXllcklkGAEgASgFEhEKCXdlYWZvbk51bRgCIAEoBSqbBQoFTXNnSWQSEAoM",
-            "U19FTlRFUl9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAESCwoHU19TUEFXThAC",
-            "Eg0KCVNfREVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAFEgoKBkNf",
-            "REFTSBAGEgoKBlNfREFTSBAHEgsKB0NfU0NBTEUQCBILCgdTX1NDQUxFEAkS",
-            "CgoGQ19ST09NEAoSCgoGU19ST09NEAsSEQoNQ19DUkVBVEVfUk9PTRAMEhkK",
-            "FVNfUk9PTV9DUkVBVEVfU1VDQ0VTUxANEhAKDFNfRU5URVJfUk9PTRAOEhMK",
-            "D0NfU0VORF9NQVBfREFUQRAPEg8KC0NfSk9JTl9ST09NEBASEAoMU19MRUFW",
-            "RV9ST09NEBESEAoMQ19MRUFWRV9ST09NEBISGAoUU19NQVBfU0FWRV9EQVRB",
-            "X1NFTkQQExIPCgtTX01vYl9TcGF3bhAUEhEKDVNfTW9iX0Rlc3Bhd24QFRIP",
-            "CgtDX01vYl9TcGF3bhAWEhEKDUNfTW9iX0Rlc3Bhd24QFxIOCgpTX01vYl9N",
-            "b3ZlEBgSDgoKQ19Nb2JfTW92ZRAZEg0KCVNfTW9iX0F0axAaEg0KCUNfTW9i",
-            "X0F0axAbEgoKBlNfU0hPUBAcEgoKBkNfU0hPUBAdEhIKDlNfQk9TU19QQVRU",
-            "RVJOEB4SEgoOQ19CT1NTX1BBVFRFUk4QHxITCg9TX0JPU1NfTU9CX01PVkUQ",
-            "IBITCg9DX0JPU1NfTU9CX01PVkUQIRINCglTX01PQl9ISVQQIhINCglDX01P",
-            "Ql9ISVQQIxIJCgVTX0hJVBAkEgkKBUNfSElUECUSEwoPU19XRUFGT05fQ0hB",
-            "TkdFECYSEwoPQ19XRUFGT05fQ0hBTkdFECcqOQoNQ3JlYXR1cmVTdGF0ZRII",
-            "CgRJRExFEAASCgoGTU9WSU5HEAESCAoESlVNUBACEggKBERBU0gQAyooCgdN",
-            "b3ZlRGlyEggKBE5PTkUQABIICgRMRUZUEAESCQoFUklHSFQQAkIbqgIYR29v",
-            "Z2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "YXllcklkGAEgASgFEhEKCXdlYWZvbk51bRgCIAEoBSIbCgpDX01vbmV5U2V0",
+            "Eg0KBW1vbmV5GAEgASgFIi0KClNfTW9uZXlTZXQSEAoIcGxheWVySWQYASAB",
+            "KAUSDQoFbW9uZXkYAiABKAUqvQUKBU1zZ0lkEhAKDFNfRU5URVJfR0FNRRAA",
+            "EhAKDFNfTEVBVkVfR0FNRRABEgsKB1NfU1BBV04QAhINCglTX0RFU1BBV04Q",
+            "AxIKCgZDX01PVkUQBBIKCgZTX01PVkUQBRIKCgZDX0RBU0gQBhIKCgZTX0RB",
+            "U0gQBxILCgdDX1NDQUxFEAgSCwoHU19TQ0FMRRAJEgoKBkNfUk9PTRAKEgoK",
+            "BlNfUk9PTRALEhEKDUNfQ1JFQVRFX1JPT00QDBIZChVTX1JPT01fQ1JFQVRF",
+            "X1NVQ0NFU1MQDRIQCgxTX0VOVEVSX1JPT00QDhITCg9DX1NFTkRfTUFQX0RB",
+            "VEEQDxIPCgtDX0pPSU5fUk9PTRAQEhAKDFNfTEVBVkVfUk9PTRAREhAKDENf",
+            "TEVBVkVfUk9PTRASEhgKFFNfTUFQX1NBVkVfREFUQV9TRU5EEBMSDwoLU19N",
+            "b2JfU3Bhd24QFBIRCg1TX01vYl9EZXNwYXduEBUSDwoLQ19Nb2JfU3Bhd24Q",
+            "FhIRCg1DX01vYl9EZXNwYXduEBcSDgoKU19Nb2JfTW92ZRAYEg4KCkNfTW9i",
+            "X01vdmUQGRINCglTX01vYl9BdGsQGhINCglDX01vYl9BdGsQGxIKCgZTX1NI",
+            "T1AQHBIKCgZDX1NIT1AQHRISCg5TX0JPU1NfUEFUVEVSThAeEhIKDkNfQk9T",
+            "U19QQVRURVJOEB8SEwoPU19CT1NTX01PQl9NT1ZFECASEwoPQ19CT1NTX01P",
+            "Ql9NT1ZFECESDQoJU19NT0JfSElUECISDQoJQ19NT0JfSElUECMSCQoFU19I",
+            "SVQQJBIJCgVDX0hJVBAlEhMKD1NfV0VBRk9OX0NIQU5HRRAmEhMKD0NfV0VB",
+            "Rk9OX0NIQU5HRRAnEg8KC1NfTU9ORVlfU0VUECgSDwoLQ19NT05FWV9TRVQQ",
+            "KSo5Cg1DcmVhdHVyZVN0YXRlEggKBElETEUQABIKCgZNT1ZJTkcQARIICgRK",
+            "VU1QEAISCAoEREFTSBADKigKB01vdmVEaXISCAoETk9ORRAAEggKBExFRlQQ",
+            "ARIJCgVSSUdIVBACQhuqAhhHb29nbGUuUHJvdG9idWYuUHJvdG9jb2xiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.CreatureState), typeof(global::Google.Protobuf.Protocol.MoveDir), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -153,7 +156,9 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Hit), global::Google.Protobuf.Protocol.C_Hit.Parser, new[]{ "Damage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Hit), global::Google.Protobuf.Protocol.S_Hit.Parser, new[]{ "PlayerId", "Damage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_WeafonChange), global::Google.Protobuf.Protocol.C_WeafonChange.Parser, new[]{ "WeafonNum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_WeafonChange), global::Google.Protobuf.Protocol.S_WeafonChange.Parser, new[]{ "PlayerId", "WeafonNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_WeafonChange), global::Google.Protobuf.Protocol.S_WeafonChange.Parser, new[]{ "PlayerId", "WeafonNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_MoneySet), global::Google.Protobuf.Protocol.C_MoneySet.Parser, new[]{ "Money" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_MoneySet), global::Google.Protobuf.Protocol.S_MoneySet.Parser, new[]{ "PlayerId", "Money" }, null, null, null, null)
           }));
     }
     #endregion
@@ -201,6 +206,8 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("C_HIT")] CHit = 37,
     [pbr::OriginalName("S_WEAFON_CHANGE")] SWeafonChange = 38,
     [pbr::OriginalName("C_WEAFON_CHANGE")] CWeafonChange = 39,
+    [pbr::OriginalName("S_MONEY_SET")] SMoneySet = 40,
+    [pbr::OriginalName("C_MONEY_SET")] CMoneySet = 41,
   }
 
   public enum CreatureState {
@@ -7491,6 +7498,292 @@ namespace Google.Protobuf.Protocol {
           }
           case 16: {
             WeafonNum = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class C_MoneySet : pb::IMessage<C_MoneySet> {
+    private static readonly pb::MessageParser<C_MoneySet> _parser = new pb::MessageParser<C_MoneySet>(() => new C_MoneySet());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<C_MoneySet> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public C_MoneySet() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public C_MoneySet(C_MoneySet other) : this() {
+      money_ = other.money_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public C_MoneySet Clone() {
+      return new C_MoneySet(this);
+    }
+
+    /// <summary>Field number for the "money" field.</summary>
+    public const int MoneyFieldNumber = 1;
+    private int money_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Money {
+      get { return money_; }
+      set {
+        money_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as C_MoneySet);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(C_MoneySet other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Money != other.Money) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Money != 0) hash ^= Money.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Money != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Money);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Money != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Money);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(C_MoneySet other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Money != 0) {
+        Money = other.Money;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Money = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class S_MoneySet : pb::IMessage<S_MoneySet> {
+    private static readonly pb::MessageParser<S_MoneySet> _parser = new pb::MessageParser<S_MoneySet>(() => new S_MoneySet());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<S_MoneySet> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[48]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_MoneySet() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_MoneySet(S_MoneySet other) : this() {
+      playerId_ = other.playerId_;
+      money_ = other.money_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_MoneySet Clone() {
+      return new S_MoneySet(this);
+    }
+
+    /// <summary>Field number for the "playerId" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private int playerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "money" field.</summary>
+    public const int MoneyFieldNumber = 2;
+    private int money_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Money {
+      get { return money_; }
+      set {
+        money_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as S_MoneySet);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(S_MoneySet other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlayerId != other.PlayerId) return false;
+      if (Money != other.Money) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PlayerId != 0) hash ^= PlayerId.GetHashCode();
+      if (Money != 0) hash ^= Money.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PlayerId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PlayerId);
+      }
+      if (Money != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Money);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PlayerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayerId);
+      }
+      if (Money != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Money);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(S_MoneySet other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PlayerId != 0) {
+        PlayerId = other.PlayerId;
+      }
+      if (other.Money != 0) {
+        Money = other.Money;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PlayerId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Money = input.ReadInt32();
             break;
           }
         }

@@ -281,4 +281,7 @@ class PacketHandler
 		sWeafonChangePacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
 		clientSession.MyPlayer.Room.Broadcast(sWeafonChangePacket);
 	}
+	public static void C_WeafonChangeHandler(PacketSession session, IMessage packet)
+	{
+	}
 }
