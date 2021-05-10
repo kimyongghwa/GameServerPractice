@@ -260,6 +260,7 @@ class PacketHandler
 		S_MobHit sMonsterPacket = new S_MobHit();
 		sMonsterPacket.Damage = monsterPacket.Damage;
 		sMonsterPacket.MobId = monsterPacket.MobId;
+		sMonsterPacket.HitPcId = monsterPacket.HitPcId;
 		sMonsterPacket.IsBoss = monsterPacket.IsBoss;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
@@ -281,7 +282,7 @@ class PacketHandler
 		sWeafonChangePacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
 		clientSession.MyPlayer.Room.Broadcast(sWeafonChangePacket);
 	}
-	public static void C_WeafonChangeHandler(PacketSession session, IMessage packet)
+	public static void C_MoneySetHandler(PacketSession session, IMessage packet)
 	{
 	}
 }

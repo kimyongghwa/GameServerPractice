@@ -267,12 +267,14 @@ message C_MobHit{
 	int32 mobId = 1;
 	int32 damage = 2;
 	bool isBoss = 3;
+	int32 hitPcId = 4;
 }
 
 message S_MobHit{
 	int32 mobId = 1;
 	int32 damage = 2;
 	bool isBoss = 3;
+	int32 hitPcId = 4;
 }
 
 message C_Hit{
