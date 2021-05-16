@@ -47,6 +47,9 @@ enum MsgId {
   C_WEAFON_CHANGE = 39;
   S_MONEY_SET = 40;
   C_MONEY_SET = 41;
+  S_ATK = 42;
+  C_ATK = 43;
+
 }
 
 enum CreatureState {
@@ -296,10 +299,21 @@ message S_WeafonChange{
 }
 
 message C_MoneySet{
-	int32 money = 1;
+	int32 playerId = 1;
+	int32 money = 2;
 }
 
 message S_MoneySet{
 	int32 playerId = 1;
 	int32 money = 2;
+}
+
+message C_Atk{
+	int32 playerId = 1;
+	ProtoVector gapVector = 2;
+}
+
+message S_Atk{
+	int32 playerId = 1;
+	ProtoVector gapVector = 2;
 }

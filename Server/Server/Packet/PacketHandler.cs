@@ -284,5 +284,15 @@ class PacketHandler
 	}
 	public static void C_MoneySetHandler(PacketSession session, IMessage packet)
 	{
+		ClientSession clientSession = session as ClientSession;
+		C_MoneySet moneyPacket = packet as C_MoneySet;
+		S_MoneySet sMoneyPacket = packet as S_MoneySet;
+		sMoneyPacket.Money = moneyPacket.Money;
+		sMoneyPacket.PlayerId = moneyPacket.PlayerId;
 	}
+
+	public static void C_AtkHandler(PacketSession session, IMessage packet)
+    {
+
+    }
 }

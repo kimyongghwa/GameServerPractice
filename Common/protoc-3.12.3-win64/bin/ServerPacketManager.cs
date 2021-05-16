@@ -60,7 +60,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CWeafonChange, MakePacket<C_WeafonChange>);
 		_handler.Add((ushort)MsgId.CWeafonChange, PacketHandler.C_WeafonChangeHandler);		
 		_onRecv.Add((ushort)MsgId.CMoneySet, MakePacket<C_MoneySet>);
-		_handler.Add((ushort)MsgId.CMoneySet, PacketHandler.C_MoneySetHandler);
+		_handler.Add((ushort)MsgId.CMoneySet, PacketHandler.C_MoneySetHandler);		
+		_onRecv.Add((ushort)MsgId.CAtk, MakePacket<C_Atk>);
+		_handler.Add((ushort)MsgId.CAtk, PacketHandler.C_AtkHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)
