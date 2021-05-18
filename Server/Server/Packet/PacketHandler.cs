@@ -286,13 +286,19 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		C_MoneySet moneyPacket = packet as C_MoneySet;
-		S_MoneySet sMoneyPacket = packet as S_MoneySet;
+		S_MoneySet sMoneyPacket = new S_MoneySet();
 		sMoneyPacket.Money = moneyPacket.Money;
 		sMoneyPacket.PlayerId = moneyPacket.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(sMoneyPacket);
 	}
 
 	public static void C_AtkHandler(PacketSession session, IMessage packet)
     {
-
-    }
+		ClientSession clientSession = session as ClientSession;
+		C_Atk atkPacket = packet as C_Atk;
+		S_Atk sAtkPacket = new S_Atk();
+		sAtkPacket.GapVector = atkPacket.GapVector;
+		sAtkPacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(sAtkPacket);
+	}
 }
