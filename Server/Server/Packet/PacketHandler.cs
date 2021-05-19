@@ -173,6 +173,7 @@ class PacketHandler
 			monster.Info = monsterPacket.Mob;
 			monster.Info.MonsterId = mobIdTmp;
 			monster.Session = clientSession;
+			Console.WriteLine("MobSpawn ID : " + monster.Info.MonsterId);
 			clientSession.MyPlayer.Room.EnterMob(monster, clientSession); //EnterMob 내에서 전송한다.
 		}
 		////나 말고 방안의 모든플레이어에게 전송
@@ -208,7 +209,6 @@ class PacketHandler
 		//서버에서 이동
 		PlayerManager.Instance.FindMob(monsterPacket.MonsterId).Info.PosInfo.PosX = monsterPacket.PosInfo.PosX;
 		PlayerManager.Instance.FindMob(monsterPacket.MonsterId).Info.PosInfo.PosY = monsterPacket.PosInfo.PosY;
-		Console.WriteLine($"cmobmove{monsterPacket.PosInfo.PosX}, {monsterPacket.PosInfo.PosY}");
 		//모두에게 전송
 		S_MobMove sMonsterPacket = new S_MobMove();
 		sMonsterPacket.MonsterId = monsterPacket.MonsterId;
@@ -294,6 +294,7 @@ class PacketHandler
 
 	public static void C_AtkHandler(PacketSession session, IMessage packet)
     {
+		Console.WriteLine("Atk");
 		ClientSession clientSession = session as ClientSession;
 		C_Atk atkPacket = packet as C_Atk;
 		S_Atk sAtkPacket = new S_Atk();
