@@ -70,7 +70,11 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SMoneySet, MakePacket<S_MoneySet>);
 		_handler.Add((ushort)MsgId.SMoneySet, PacketHandler.S_MoneySetHandler);		
 		_onRecv.Add((ushort)MsgId.SAtk, MakePacket<S_Atk>);
-		_handler.Add((ushort)MsgId.SAtk, PacketHandler.S_AtkHandler);
+		_handler.Add((ushort)MsgId.SAtk, PacketHandler.S_AtkHandler);		
+		_onRecv.Add((ushort)MsgId.SPortalMove, MakePacket<S_PortalMove>);
+		_handler.Add((ushort)MsgId.SPortalMove, PacketHandler.S_PortalMoveHandler);		
+		_onRecv.Add((ushort)MsgId.SPlayerDie, MakePacket<S_PlayerDie>);
+		_handler.Add((ushort)MsgId.SPlayerDie, PacketHandler.S_PlayerDieHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

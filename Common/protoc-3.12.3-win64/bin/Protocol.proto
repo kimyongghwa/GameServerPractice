@@ -49,7 +49,10 @@ enum MsgId {
   C_MONEY_SET = 41;
   S_ATK = 42;
   C_ATK = 43;
-
+  S_Portal_Move = 44;
+  C_Portal_Move = 45;
+  S_Player_Die = 46;
+  C_Player_Die = 47;
 }
 
 enum CreatureState {
@@ -189,6 +192,7 @@ message S_RoomCreateSuccess{
 	int32 plaerId = 1;
 	RoomInfo room = 2;
 	PlayerInfo player = 3;
+	int32 character = 4;
 }
 
 message C_SendMapData{
@@ -317,3 +321,20 @@ message S_Atk{
 	int32 playerId = 1;
 	ProtoVector gapVector = 2;
 }
+
+message C_PortalMove{
+	
+}
+
+message S_PortalMove{
+
+}
+
+message C_PlayerDie{
+
+}
+
+message S_PlayerDie{
+	int32 playerId = 1;
+}
+

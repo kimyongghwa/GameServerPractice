@@ -293,7 +293,7 @@ class PacketHandler
 	}
 
 	public static void C_AtkHandler(PacketSession session, IMessage packet)
-    {
+	{
 		Console.WriteLine("Atk");
 		ClientSession clientSession = session as ClientSession;
 		C_Atk atkPacket = packet as C_Atk;
@@ -301,5 +301,18 @@ class PacketHandler
 		sAtkPacket.GapVector = atkPacket.GapVector;
 		sAtkPacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
 		clientSession.MyPlayer.Room.Broadcast(sAtkPacket);
+	}
+	public static void C_PortalMoveHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		S_PortalMove portalPacket = new S_PortalMove();
+		clientSession.MyPlayer.Room.Broadcast(portalPacket);
+	}
+	public static void C_PlayerDieHandler(PacketSession session, IMessage packet)
+    {
+		ClientSession clientSession = session as ClientSession;
+		S_PlayerDie diePacket = new S_PlayerDie();
+		diePacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(diePacket);
 	}
 }
