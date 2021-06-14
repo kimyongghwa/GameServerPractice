@@ -111,6 +111,7 @@ class PacketHandler
 		clientSession.MyPlayer.Info.ChNum = createRoomPacket.ChNum;
 		roomSuccessPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(roomSuccessPacket);
+		Console.WriteLine("SendRoomCreateSuccess!");
 	}
 
 	public static void C_SendMapDataHandler(PacketSession session, IMessage packet)
@@ -123,7 +124,10 @@ class PacketHandler
 		if (gameRoom.MData.Map.Count >= mapCounter)
 			gameRoom.isCreating = false;
 		if (clientSession.MyPlayer.Room != RoomManager.Instance.Find(sendMapPacket.RoomId))
+		{
 			RoomManager.Instance.Find(sendMapPacket.RoomId).EnterRoom(clientSession.MyPlayer);
+			Console.WriteLine("Enter");
+		}
 	}
 
 	public static void C_JoinRoomHandler(PacketSession session, IMessage packet)
@@ -135,9 +139,9 @@ class PacketHandler
 		if (gameRoom.isCreating)
 			return;
 		//TODO 비밀번호 체크
+		clientSession.MyPlayer.Info.ChNum = joinPacket.ChNum;
 		gameRoom.EnterRoom(clientSession.MyPlayer);
 		S_EnterRoom enterRoomPacket = new S_EnterRoom();
-		clientSession.MyPlayer.Info.ChNum = joinPacket.ChNum;
 		enterRoomPacket.Player = clientSession.MyPlayer.Info;
 		clientSession.Send(enterRoomPacket);
 		S_MapSaveDataSend mapSendPacket = new S_MapSaveDataSend();
@@ -306,6 +310,7 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		S_PortalMove portalPacket = new S_PortalMove();
+		portalPacket.TpVector = (packet as C_PortalMove).TpVector;
 		clientSession.MyPlayer.Room.Broadcast(portalPacket);
 	}
 	public static void C_PlayerDieHandler(PacketSession session, IMessage packet)

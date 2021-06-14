@@ -323,11 +323,11 @@ message S_Atk{
 }
 
 message C_PortalMove{
-	
+	ProtoVector tpVector =1;
 }
 
 message S_PortalMove{
-
+	ProtoVector tpVector =1;
 }
 
 message C_PlayerDie{
