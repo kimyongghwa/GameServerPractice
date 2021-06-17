@@ -9,7 +9,7 @@ using System.Text;
 
 class PacketHandler
 {
-	public static readonly int mapCounter = 3;
+	public static readonly int mapCounter = 2;
 
 	public static void C_MoveHandler(PacketSession session, IMessage packet)
 	{
@@ -88,7 +88,8 @@ class PacketHandler
 			roomInfo.RoomId = i;
 			roomInfo.Name = RoomManager.Instance.Find(i).RoomName;
 			roomInfo.Password = RoomManager.Instance.Find(i).Password;
-			roomPacket.Room.Add(roomInfo);
+			if(!RoomManager.Instance.Find(i).isCreating && !RoomManager.Instance.Find(i).isPlaying)
+				roomPacket.Room.Add(roomInfo);
 		}
 		clientSession.Send(roomPacket);
 	}
@@ -136,7 +137,7 @@ class PacketHandler
 		C_JoinRoom joinPacket = packet as C_JoinRoom;
 		Console.WriteLine("Joinroom " + joinPacket.RoomId);
 		GameRoom gameRoom = RoomManager.Instance.Find(joinPacket.RoomId);
-		if (gameRoom.isCreating)
+		if (gameRoom.isCreating || gameRoom.isPlaying)
 			return;
 		//TODO 비밀번호 체크
 		clientSession.MyPlayer.Info.ChNum = joinPacket.ChNum;
@@ -221,6 +222,7 @@ class PacketHandler
 	}
 	public static void C_MobAtkHandler(PacketSession session, IMessage packet)
 	{
+		Console.Write("C_MobAtkHandler");
 		ClientSession clientSession = session as ClientSession;
 		C_MobAtk monsterPacket = packet as C_MobAtk;
 		S_MobAtk sMonsterPacket = new S_MobAtk();
@@ -310,6 +312,7 @@ class PacketHandler
 	{
 		ClientSession clientSession = session as ClientSession;
 		S_PortalMove portalPacket = new S_PortalMove();
+		clientSession.MyPlayer.Room.isPlaying = true;
 		portalPacket.TpVector = (packet as C_PortalMove).TpVector;
 		clientSession.MyPlayer.Room.Broadcast(portalPacket);
 	}
