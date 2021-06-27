@@ -66,7 +66,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CPortalMove, MakePacket<C_PortalMove>);
 		_handler.Add((ushort)MsgId.CPortalMove, PacketHandler.C_PortalMoveHandler);		
 		_onRecv.Add((ushort)MsgId.CPlayerDie, MakePacket<C_PlayerDie>);
-		_handler.Add((ushort)MsgId.CPlayerDie, PacketHandler.C_PlayerDieHandler);
+		_handler.Add((ushort)MsgId.CPlayerDie, PacketHandler.C_PlayerDieHandler);		
+		_onRecv.Add((ushort)MsgId.CPlayerAtkStop, MakePacket<C_PlayerAtkStop>);
+		_handler.Add((ushort)MsgId.CPlayerAtkStop, PacketHandler.C_PlayerAtkStopHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

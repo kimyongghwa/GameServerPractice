@@ -268,6 +268,7 @@ class PacketHandler
 		sMonsterPacket.MobId = monsterPacket.MobId;
 		sMonsterPacket.HitPcId = monsterPacket.HitPcId;
 		sMonsterPacket.IsBoss = monsterPacket.IsBoss;
+		sMonsterPacket.KnockbackVector = monsterPacket.KnockbackVector;
 		clientSession.MyPlayer.Room.Broadcast(sMonsterPacket);
 	}
 	public static void C_HitHandler(PacketSession session, IMessage packet)
@@ -277,6 +278,7 @@ class PacketHandler
 		S_Hit sHitPacket = new S_Hit();
 		sHitPacket.Damage = hitPacket.Damage;
 		sHitPacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
+		sHitPacket.KnockbackVector = hitPacket.KnockbackVector;
 		clientSession.MyPlayer.Room.Broadcast(sHitPacket);
 	}
 	public static void C_WeafonChangeHandler(PacketSession session, IMessage packet)
@@ -322,5 +324,12 @@ class PacketHandler
 		S_PlayerDie diePacket = new S_PlayerDie();
 		diePacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
 		clientSession.MyPlayer.Room.Broadcast(diePacket);
+	}
+	public static void C_PlayerAtkStopHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+		S_PlayerAtkStop atkStopPacket = new S_PlayerAtkStop();
+		atkStopPacket.PlayerId = clientSession.MyPlayer.Info.PlayerId;
+		clientSession.MyPlayer.Room.Broadcast(atkStopPacket);
 	}
 }

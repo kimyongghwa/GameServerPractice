@@ -53,6 +53,8 @@ enum MsgId {
   C_Portal_Move = 45;
   S_Player_Die = 46;
   C_Player_Die = 47;
+  S_Player_Atk_Stop = 48;
+  C_Player_Atk_Stop = 49;
 }
 
 enum CreatureState {
@@ -290,11 +292,13 @@ message S_MobHit{
 
 message C_Hit{
 	int32 damage = 1;
+	ProtoVector knockbackVector = 2;
 }
 
 message S_Hit{
 	int32 playerId = 1;
 	int32 damage = 2;
+	ProtoVector knockbackVector = 3;
 }
 
 message C_WeafonChange{
@@ -342,3 +346,10 @@ message S_PlayerDie{
 	int32 playerId = 1;
 }
 
+message  C_PlayerAtkStop{
+
+}
+
+message  S_PlayerAtkStop{
+	int32 playerId = 1;
+}

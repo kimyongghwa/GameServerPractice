@@ -74,7 +74,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SPortalMove, MakePacket<S_PortalMove>);
 		_handler.Add((ushort)MsgId.SPortalMove, PacketHandler.S_PortalMoveHandler);		
 		_onRecv.Add((ushort)MsgId.SPlayerDie, MakePacket<S_PlayerDie>);
-		_handler.Add((ushort)MsgId.SPlayerDie, PacketHandler.S_PlayerDieHandler);
+		_handler.Add((ushort)MsgId.SPlayerDie, PacketHandler.S_PlayerDieHandler);		
+		_onRecv.Add((ushort)MsgId.SPlayerAtkStop, MakePacket<S_PlayerAtkStop>);
+		_handler.Add((ushort)MsgId.SPlayerAtkStop, PacketHandler.S_PlayerAtkStopHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)
